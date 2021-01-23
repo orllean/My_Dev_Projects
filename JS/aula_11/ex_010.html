@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estruturas de decisão - Detran</title>
+</head>
+<body>
+    <h1>Sistema de multas</h1>
+    Velocidade do carro: <input type="number" name="txt_kmh" id="txt_kmh"> Km/h
+    <p><input type="button" value="Verificar" onclick="bt_verificar()"></p>
+    <div id="dv_res"></div>
+    <script>
+        function bt_verificar(){
+            var res = window.document.getElementById('dv_res')
+            var txt_kmh = window.document.getElementById('txt_kmh')
+            var kmh = Number(txt_kmh.value)
+
+            res.innerHTML = `Sua velocidade é de <strong>${kmh}</strong> Km/h`
+            if(kmh > 60){
+                res.innerHTML += `<p>Você excedeu o limite de 60Km/h. E foi <strong>multado</strong>`
+            }
+            res.innerHTML += `<p>Dirija sempre com cinto de segurança</p>`
+        }
+        
+    </script>
+</body>
+</html>

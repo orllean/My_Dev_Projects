@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex_003</title>
+    <style>
+        /*Inicio do estilo CSS*/
+        body{
+            background-color:rgb(49, 49, 221);
+            color: white;
+            font: normal 20pt arial;
+        }
+        h1{
+            color: rgb(235, 235, 15);
+        }
+    </style>
+</head>
+<body>
+    <!--Corpo da página-->
+    <h1>Olá, mundo!</h1>
+    <p>Já me livrei da maldição</p>
+    <script>
+        var n1 = window.prompt('Digite o primeiro número:') //dados oriundos do pronpt são strings
+        var n2 = window.prompt('Digite o segundo número:') //dados oriundos do pronpt são strings
+        var resp = n1 + n2 //logo o sinal de + ira concatenar as variaveis
+        window.alert('A soma dos números digitados é: ' + resp) // para que o sinal de + some devemos ter duas variaveis do tipo number
+        var resp = Number(n1) + Number(n2) //pode converter a string em numero de tres modos: Number.parseFloat, Number.parseInt ou somente Number
+        window.alert('A soma dos números digitados é: ' + String(resp))// pra converte em string: String(variavel) ou variavel.toString()
+        window.alert(`O primeiro número digitado foi ${n1} e o segundo foi ${n2}`) //Técica de Template String - utilizando o sinal de crase (`) podemos fazer a concatenação utilizando Placeholder ${variavel}
+    </script>
+</body>
+</html>

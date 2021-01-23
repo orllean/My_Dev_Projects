@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formataçãoo de Texto</title>
+</head>
+<body>
+    <h1>Outras formatações</h1>
+    <h2>Trechos de Código em Python</h2>
+     <!-- mantém o texto pré-formatado, exatamente da mesma maneira na qual ele foi digitado, incluindo quebras de linhas, espaços e tabulações. -->
+    <pre>
+        <code> <!-- indica ao navegador que se trata de um código de computador. -->
+    num = int(input('Digite um número'))
+    if num % 2 == 0:
+        print(f'O número {num} é par')
+    else:
+        print(f'O número {num} é ímpar')
+    print('FIM DO PROGRAMA')
+        </code>
+    </pre>    
+    <h2>Citações</h2>
+    <!-- Para criar uma citação em HTML, podemos usar a tag <q> (do Inglês quote, que significa citar). O texto que estiver entre <q> e </q> já vai receber automaticamente as aspas, mas não terá nenhum deslocamento. Essa técnica é mais usada quando queremos uma citação no meio de um parágrafo. -->
+<p>Como disse um sábio: <q>O compudador é um burro muito rápido!</q></p>
+<blockquote cite="https://pt.wikipedia.org/wiki/PHP">PHP é uma linguagem interpretada livre, usada originalmente apenas para o desenvolvimento de aplicações presentes e atuantes no lado do servidor, capazes de gerar conteúdo dinâmico na World Wide Web.</blockquote>
+<h2>Abreviações</h2>
+<p>Eu estou estudando <abbr title="Hyper Teext Markup Language">HTML</abbr> para criar sites</p>
+<h2>Texto invertido</h2>
+<p><bdo dir="rtl">Este texto está todo invertino</bdo> no formato RIGHT-TO-LEFT</p>
+</body>
+</html>

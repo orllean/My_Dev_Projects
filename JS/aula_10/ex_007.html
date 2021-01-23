@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM P2 - Somndo Números</title>
+    <style>
+        body{
+            font: normal 14pt Arial;
+            margin-left: 40px;
+        }
+        input{
+            font: normal 14pt Arial;
+            width: 100px;
+        }
+        div#resultado{
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Somando Valores</h1>
+    <input type="number" name="txt_n1" id="txt_n1"> + 
+    <input type="number" name="txt_n2" id="txt_n2">
+    <input type="button" value="somar" onclick="somar()">
+    <div id="resultado">Resultado</div>
+    <script>
+        function somar(){
+            var res = window.document.getElementById('resultado')
+            var n1_txt = window.document.getElementById('txt_n1')
+            var n2_txt = window.document.getElementById('txt_n2')
+            var n1 = Number(n1_txt.value)
+            var n2 = Number(n2_txt.value)
+            var s = n1 + n2
+            res.innerHTML = `A soma entre ${n1} e ${n2} é igual a <strong>${s}</strong>`
+        }
+    </script>
+</body>
+</html>
