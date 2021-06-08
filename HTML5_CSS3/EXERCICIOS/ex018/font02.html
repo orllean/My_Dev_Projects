@@ -5,10 +5,31 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Fontes Externas</title>
-		<style></style>
+		<style>
+			/* 
+				Tipos de formato para fonte-face:
+				_opentype (otf)
+				_truetype (ttf)
+				_truetype-aat (Adobe Advanced Typography)
+				_embedded-opentype
+				_svg
+			*/
+			@font-face {
+				font-family: "Love";
+				src: url("fonts/love larry.otf") format("opentype"),
+					url("fonts/love larry.ttf") format("truetype");
+			}
+			body {
+				font-family: Arial, Helvetica, sans-serif;
+			}
+			h1 {
+				font-family: "Love", Times, serif;
+				font-weight: normal;
+			}
+		</style>
 	</head>
 	<body>
-		<h1>Título</h1>
+		<h1>Feliz dia dos namorados</h1>
 		<p>
 			Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium, nam
 			quidem corporis repellat optio quae nobis officia neque asperiores id
