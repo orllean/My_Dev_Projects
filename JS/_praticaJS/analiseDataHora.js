@@ -18,3 +18,4 @@
     console.log(`Hora: ${hora}`)
     console.log(`Minutos: ${min}`)
     console.log(`Segundos: ${sec}`)
+    console.log(`${diaMes} / ${mes[numMes]} / ${ano}`)
