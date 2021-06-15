@@ -105,7 +105,7 @@ for(i=0;i<3;i++){
     //console.log(`ant: ${ant} grasshopper: ${grasshopper}`)
 }
 
-//ceate a function declaration that uses a retrun statement
+//create a function declaration that uses a retrun statement
 //EX_1
 
 let wallet=50;
@@ -119,9 +119,9 @@ function inBath(dollars) {
     return bath;
 }
 
-console.log(wallet + ' US dollars is:')
-console.log(inYen(wallet) + ' Japanese yen:')
-console.log(inBath(wallet) + ' Taih bath:')
+//console.log(wallet + ' US dollars is:')
+//console.log(inYen(wallet) + ' Japanese yen:')
+//console.log(inBath(wallet) + ' Taih bath:')
 
 //EX_2
 arr2=[
@@ -145,6 +145,37 @@ function maximum(array){
 };
 
 for (let list of arr2) {
-    console.log(list)
+    //console.log(list)
 }
-console.log(maximum(arr2))
+//console.log(maximum(arr2))
+
+//recursive function
+//1
+function sendPostcards(amount) {
+    console.log('Postcard '+amount+' sent!');
+    if (amount===1) {
+        console.log('All Postcards sent!');
+        //return amount;        
+    } else {
+        let amountRemaing=amount-1;
+        console.log('Calling function again:');
+        return sendPostcards(amountRemaing);
+    }
+};
+
+//sendPostcards(5)
+
+//2
+const travelDocument='Hello grasshoperTravel! You will ge going to Brasil. You travel code is: "no1grasshoper" Enjoy your trip grasshoper'
+
+function updateAllNames(string, oldPart, newPart) {
+    if (string.includes(oldPart)===false) {
+        return string;
+    }
+    
+    string=string.replace(oldPart, newPart);
+    return updateAllNames(string, oldPart, newPart);
+};
+
+console.log(travelDocument);
+console.log(updateAllNames(travelDocument, 'grasshoper', 'grasshopper'));

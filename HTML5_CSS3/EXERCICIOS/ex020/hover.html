@@ -9,6 +9,7 @@
 			body {
 				font-family: Arial, Helvetica, sans-serif;
 			}
+			/* Exemplo_1 */
 			div > p {
 				display: none;
 			}
@@ -23,6 +24,37 @@
 				background-color: red;
 				width: 300px;
 			}
+			/* Exemplo_2 */
+			a {
+				font-weight: bold;
+				text-decoration: none;
+				color: red;
+			}
+
+			a:visited {
+				color: darkmagenta;
+			}
+
+			a:hover {
+				color: darkred;
+				text-decoration: underline;
+			}
+
+			.especial:hover {
+				color: white;
+				background-color: black;
+				text-decoration: none;
+			}
+
+			.especial::before {
+				content: ">>";
+				font-weight: lighter;
+			}
+
+			.especial::after {
+				content: "<<";
+				font-weight: lighter;
+			}
 		</style>
 	</head>
 	<body>
@@ -32,5 +64,34 @@
 			Passe o mouse aqui
 			<p>TEXTO ESCONDIDO...</p>
 		</div>
+
+		<h1>Exemp_2 Personalizando um link</h1>
+		<p>
+			Lorem ipsum dolor sit amet.
+			<a
+				href="https://github.com/gustavoguanabara/gustavoguanabara.github.io"
+				target="_black"
+			>
+				Lorem ipsum dolor sit amet consectetur adipisicing.
+			</a>
+		</p>
+
+		<p>
+			Lorem ipsum dolor sit amet.
+			<a href="https://w3c.br" target="_black">
+				Lorem ipsum dolor sit amet consectetur adipisicing.
+			</a>
+		</p>
+
+		<p>
+			Lorem ipsum dolor sit amet.
+			<a
+				href="https://www.youtube.com/channel/UCrWvhVmt0Qac3HgsjQK62FQ"
+				class="especial"
+				target="_black"
+			>
+				Lorem ipsum dolor sit amet consectetur adipisicing.
+			</a>
+		</p>
 	</body>
 </html>
