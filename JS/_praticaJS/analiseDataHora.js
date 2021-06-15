@@ -19,3 +19,4 @@
     console.log(`Minutos: ${min}`)
     console.log(`Segundos: ${sec}`)
     console.log(`${diaMes} / ${mes[numMes]} / ${ano}`)
+    console.log(agora.toDateString())
