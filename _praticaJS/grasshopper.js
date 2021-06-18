@@ -30,11 +30,13 @@ for (var adj of [
     }
 }
 
-var aluno={
-    name:'papai',
-    sex:'male',
-    age:'1970'
-};
+var aluno=[
+    {
+        name:'papai',
+        sex:'male',
+        year:'1970'
+    }
+];
 
 i=0
 for (var iterator of arr) {
@@ -149,13 +151,12 @@ for (let list of arr2) {
 }
 //console.log(maximum(arr2))
 
-//recursive function
-//1
+//recursive function-1
 function sendPostcards(amount) {
     console.log('Postcard '+amount+' sent!');
     if (amount===1) {
         console.log('All Postcards sent!');
-        //return amount;        
+        return amount;        
     } else {
         let amountRemaing=amount-1;
         console.log('Calling function again:');
@@ -165,7 +166,7 @@ function sendPostcards(amount) {
 
 //sendPostcards(5)
 
-//2
+//recursive function-2
 const travelDocument='Hello grasshoperTravel! You will ge going to Brasil. You travel code is: "no1grasshoper" Enjoy your trip grasshoper'
 
 function updateAllNames(string, oldPart, newPart) {
@@ -177,5 +178,69 @@ function updateAllNames(string, oldPart, newPart) {
     return updateAllNames(string, oldPart, newPart);
 };
 
-console.log(travelDocument);
-console.log(updateAllNames(travelDocument, 'grasshoper', 'grasshopper'));
+//console.log(travelDocument);
+//console.log(updateAllNames(travelDocument, 'grasshoper', 'grasshopper'));
+
+//recursive function-3
+function sumUpTo(number){
+    if (number===1) {
+        console.log('befor: '+number)
+        return 1;
+    }
+    console.log('affter: '+number)
+    return number+sumUpTo(number-1);
+}
+//sumUpTo(3)=>(3+sumUpTo(2))
+//sumUpTo(2)=>(2+sumUpTo(1))
+//sumUpTo(1)=>1)
+//so, sumUpTo(3) returns (3 + (2 + (1))) which is 6
+console.log(sumUpTo(3))
+
+//recursive function-3
+function ftl(n){
+    if (n===1) {
+        return 1;
+    }
+    return n*ftl(n-1);
+};
+console.log(ftl(4))
+
+//Array - length (comprimento do array)
+let numberOfItems=arr.length; 
+console.log('There are '+numberOfItems+' items in arr')
+
+//Array - slice(x,y) x=> to start y=> to end not included (uma parte, porção do array original)
+console.log(arr1.slice(2, 3));
+
+//Array - push (add um novo elemento no final do array)
+let last=aluno[aluno.length-1]
+console.log(last)
+let newAluno={
+    name:   'brisa',
+    sex:    'female',
+    year:    '2009'
+};
+aluno.push(newAluno);
+last=aluno[aluno.length-1];
+console.log(last)
+//console.log(last.name)
+
+
+//Array - pop (remove o ultimo elemento de um array)
+let atUltimoAluno=aluno.pop();
+atUltimoAluno.year='2010';
+aluno.push(atUltimoAluno)
+last=aluno[aluno.length-1];
+console.log(last)
+//console.log(last.year)
+
+var arr3=[
+    1,
+    3,
+    5,
+    7
+]
+let trocaUltimo=arr3.pop();
+trocaUltimo=9;
+arr3.push(trocaUltimo);
+console.log(arr3);

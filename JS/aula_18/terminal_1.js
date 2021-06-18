@@ -9,5 +9,5 @@ let amigo = {
 }
 console.log(amigo)
 console.log(`${amigo.nome} pesa: ${amigo.peso}`)
-amigo.engordar(2)
+amigo.engordar(3.5)
 console.log(`${amigo.nome} pesa: ${amigo.peso}`)
