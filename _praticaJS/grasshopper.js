@@ -184,17 +184,17 @@ function updateAllNames(string, oldPart, newPart) {
 //recursive function-3
 function sumUpTo(number){
     if (number===1) {
-        console.log('befor: '+number)
+        //console.log('befor: '+number)
         return 1;
     }
-    console.log('affter: '+number)
+    //console.log('affter: '+number)
     return number+sumUpTo(number-1);
 }
 //sumUpTo(3)=>(3+sumUpTo(2))
 //sumUpTo(2)=>(2+sumUpTo(1))
 //sumUpTo(1)=>1)
 //so, sumUpTo(3) returns (3 + (2 + (1))) which is 6
-console.log(sumUpTo(3))
+//console.log(sumUpTo(3))
 
 //recursive function-3
 function ftl(n){
@@ -203,18 +203,18 @@ function ftl(n){
     }
     return n*ftl(n-1);
 };
-console.log(ftl(4))
+//console.log(ftl(4))
 
 //Array - length (comprimento do array)
 let numberOfItems=arr.length; 
-console.log('There are '+numberOfItems+' items in arr')
+//console.log('There are '+numberOfItems+' items in arr')
 
 //Array - slice(x,y) x=> to start y=> to end not included (uma parte, porção do array original)
-console.log(arr1.slice(2, 3));
+//console.log(arr1.slice(2, 3));
 
 //Array - push (add um novo elemento no final do array)
 let last=aluno[aluno.length-1]
-console.log(last)
+//console.log(last)
 let newAluno={
     name:   'brisa',
     sex:    'female',
@@ -222,7 +222,7 @@ let newAluno={
 };
 aluno.push(newAluno);
 last=aluno[aluno.length-1];
-console.log(last)
+//console.log(last)
 //console.log(last.name)
 
 
@@ -231,7 +231,7 @@ let atUltimoAluno=aluno.pop();
 atUltimoAluno.year='2010';
 aluno.push(atUltimoAluno)
 last=aluno[aluno.length-1];
-console.log(last)
+//console.log(last)
 //console.log(last.year)
 
 var arr3=[
@@ -244,3 +244,41 @@ let trocaUltimo=arr3.pop();
 trocaUltimo=9;
 arr3.push(trocaUltimo);
 console.log(arr3);
+
+//use spread (...) operator to copy all elements of an array into another array
+let arr4=[
+    ...arr3, ...arr2
+]
+//console.log(arr4)
+
+let timeTravel=['6am', '8am', '10am', '12pm', '14pm', '16pm']
+function morning(time){
+    return time.includes('am')
+}
+
+function evening(time){
+    return time.includes('pm')
+}
+
+let amTimes=timeTravel.filter(morning);
+let pmTimes=timeTravel.filter(evening);
+
+console.log('Day times: '+amTimes);
+console.log('Eveni times: '+pmTimes);
+
+//let number=[];
+let maxNum=arr4[0];
+let minNum=arr4[0];
+//console.log(maxNum)
+function compareToMaximum(value){
+    maxNum=value>maxNum?value:maxNum;
+}
+function compareToMinimum(value){
+    maxNum=value<minNum?value:maxNum;
+}
+
+arr4.forEach(compareToMaximum);
+arr4.forEach(compareToMinimum);
+
+console.log('Maximum:' + maxNum);
+console.log('Minimum:' + minNum);
