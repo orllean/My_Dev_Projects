@@ -6,29 +6,93 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Grouping Tags</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: lightgrey;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        header {
+            margin: 10px;
+            padding: 10px;
+            background-color: snow;
+        }
+
+        nav {
+            padding: 10px;
+            background-color: silver;
+            box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        nav>a {
+            text-decoration: none;
+            font-weight: bold;
+            color: snow;
+            margin-right: 15px;
+        }
+
+        nav>a:hover {
+            color: black;
+        }
+
+        main {
+            margin: 10px;
+            padding: 10px;
+            background-color: snow;
+        }
+
+        article {
+            margin: 10px 0px;
+            padding: 5px;
+            background-color: tan;
+            border-radius: 0px 10px;
+        }
+
+        article>aside {
+            background-color: rgb(129, 111, 88);
+        }
+
+        article>aside>p {
+            margin-bottom: 0px;
+        }
+
+        footer {
+            margin: 0px 10px;
+            padding: .1px 10px;
+            background-color: snow;
+            text-align: center;
+        }
+
+        #assuntos {
+            padding: 5px;
+            background-color: darkorange;
+            border-radius: 0px 10px;
+        }
+    </style>
 </head>
 
 <body>
     <header>
         <h1>Meu site</h1>
         <nav class="menu">
-            <a href="#"></a>Link
-            <a href="#"></a>Link
-            <a href="#"></a>Link
-            <a href="#"></a>Link
-            <a href="#"></a>Link
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
         </nav>
     </header>
     <main>
         <section id="assuntos">
-            <h2>Noticias sobre o mundo</h2>
+            <h2>Noticias do mundo</h2>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum repellat molestias iure consequatur
                 maxime explicabo numquam, odit minima ducimus. Repellendus aspernatur repellat non possimus minima sequi
                 id cum accusantium mollitia eaque, tenetur quasi fugiat itaque.</p>
         </section>
         <section id="noticias">
             <article>
-                <h2>Noticias sobre o Brasil</h2>
+                <h2>Noticias do Brasil</h2>
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia, nostrum dignissimos voluptates
                     itaque iure vitae quasi et natus similique autem sunt voluptatibus maxime. Fugit commodi explicabo
                     ab excepturi ratione veritatis dolore ipsa dolorem temporibus provident.</p>
@@ -38,6 +102,7 @@
                 </aside>
             </article>
             <article>
+                <h2>Notícias da Bahia</h2>
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam maiores voluptate recusandae corporis
                     ut placeat quae, aliquid distinctio assumenda iure eaque dolores. Iure, beatae architecto?</p>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt tenetur debitis, illum nemo totam
