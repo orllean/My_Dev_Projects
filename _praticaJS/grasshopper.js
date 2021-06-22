@@ -243,7 +243,7 @@ var arr3=[
 let trocaUltimo=arr3.pop();
 trocaUltimo=9;
 arr3.push(trocaUltimo);
-console.log(arr3);
+//console.log(arr3);
 
 //use spread (...) operator to copy all elements of an array into another array
 let arr4=[
@@ -251,7 +251,8 @@ let arr4=[
 ]
 //console.log(arr4)
 
-let timeTravel=['6am', '8am', '10am', '12pm', '14pm', '16pm']
+let timeTravel=['6am', '8am', '10am', '12pm', '14pm', '16pm'];
+
 function morning(time){
     return time.includes('am')
 }
@@ -280,5 +281,39 @@ function compareToMinimum(value){
 arr4.forEach(compareToMaximum);
 arr4.forEach(compareToMinimum);
 
-console.log('Maximum:' + maxNum);
-console.log('Minimum:' + minNum);
+//console.log('Maximum:' + maxNum);
+//console.log('Minimum:' + minNum);
+
+//I'm stuck in it
+const myBooks=[
+    new Object({ title: '1984', author: 'George Orwell', isAvailable: false }),
+    new Object({ title: 'Becoming', author: 'Michele Obama', isAvailable: false }),
+    new Object({ title: 'Berserk', author: 'Kentaro Miura', isAvailable: true }),
+    new Object({ title: 'A revolução dos bichos', author: 'George Orwell', isAvailable: true })
+];
+
+function printBookByAuthor(books){
+    console.log('-----Book_Info-----');
+    console.log('Title: '+books.title);
+    console.log('Author: '+books.author);
+    console.log('Avalable: '+books.isAvailable);
+};
+
+function findAuthor(){
+    
+}
+
+function getData(name, search){
+    
+}
+
+let orwellBooks=getData('George Orwell', findAuthor);
+//orwellBooks.forEach(printBookByAuthor);
+
+let books=[]
+for (const i of myBooks) {
+    if(i.author==='George Orwell'){
+        books.push(i)
+    }
+}
+books.forEach(printBookByAuthor)
