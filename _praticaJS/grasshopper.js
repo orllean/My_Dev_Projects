@@ -70,7 +70,7 @@ for (let collor of arr1) {
 var train = Math.floor(Math.random() * 4);
 var car = Math.floor(Math.random() * 3);
 
-car < train ? console.log("drive a car") : console.log("buy train tickets");
+//car < train ? console.log("drive a car") : console.log("buy train tickets");
 
 // += additional assignment -= subtract assingnment
 
@@ -228,8 +228,8 @@ function evening(time) {
 let amTimes = timeTravel.filter(morning);
 let pmTimes = timeTravel.filter(evening);
 
-console.log("Day times: " + amTimes);
-console.log("Eveni times: " + pmTimes);
+//console.log("Day times: " + amTimes);
+//console.log("Eveni times: " + pmTimes);
 
 //let number=[];
 let maxNum = arr4[0];
@@ -250,13 +250,21 @@ arr4.forEach(compareToMinimum);
 
 //I'm stuck in it
 const myBooks = [
-	new Object({ title: "1984", author: "George Orwell", isAvailable: false }),
+	new Object({
+		title: "1984",
+		author: "George Orwell",
+		isAvailable: false,
+	}),
 	new Object({
 		title: "Becoming",
 		author: "Michele Obama",
 		isAvailable: false,
 	}),
-	new Object({ title: "Berserk", author: "Kentaro Miura", isAvailable: true }),
+	new Object({
+		title: "Berserk",
+		author: "Kentaro Miura",
+		isAvailable: true,
+	}),
 	new Object({
 		title: "A revolução dos bichos",
 		author: "George Orwell",
@@ -271,7 +279,7 @@ function printBookByAuthor(books) {
 	console.log("Avalable: " + books.isAvailable, "\n"); // ,'\n' insere uma quebra de linha
 }
 
-function findAuthor(author) {
+/* function findAuthor(author) {
 	let findBook = [];
 	for (const i of myBooks) {
 		if (i.author === author) {
@@ -279,22 +287,24 @@ function findAuthor(author) {
 		}
 	}
 	return findBook;
+} */
+
+//let orwellBooks = findAuthor("George Orwell");
+
+function findAuthor(author) {
+	let findBook = [];
+	for (const book of myBooks) {
+		if (book.author === author) {
+			findBook.push(book);
+		}
+	}
+	return findBook;
 }
 
 function getData(name, search) {
 	search(name);
-	return findAuthor;
+	return search(name);
 }
 
 let orwellBooks = getData("George Orwell", findAuthor);
-console.log(findAuthor);
-
-//orwellBooks.forEach(printBookByAuthor);
-
-/* let books = [];
-for (const i of myBooks) {
-	if (i.author === "George Orwell") {
-		books.push(i);
-	}
-}
-books.forEach(printBookByAuthor); */
+orwellBooks.forEach(printBookByAuthor);
