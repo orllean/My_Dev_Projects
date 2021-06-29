@@ -248,7 +248,7 @@ arr4.forEach(compareToMinimum);
 //console.log('Maximum:' + maxNum);
 //console.log('Minimum:' + minNum);
 
-//I'm stuck in it
+//I'm stuck in it ***no more***
 const myBooks = [
 	new Object({
 		title: "1984",
@@ -279,18 +279,6 @@ function printBookByAuthor(books) {
 	console.log("Avalable: " + books.isAvailable, "\n"); // ,'\n' insere uma quebra de linha
 }
 
-/* function findAuthor(author) {
-	let findBook = [];
-	for (const i of myBooks) {
-		if (i.author === author) {
-			findBook.push(i);
-		}
-	}
-	return findBook;
-} */
-
-//let orwellBooks = findAuthor("George Orwell");
-
 function findAuthor(author) {
 	let findBook = [];
 	for (const book of myBooks) {
@@ -308,3 +296,47 @@ function getData(name, search) {
 
 let orwellBooks = getData("George Orwell", findAuthor);
 orwellBooks.forEach(printBookByAuthor);
+
+/* function findAuthor(author) {
+	let findBook = [];
+	for (const i of myBooks) {
+		if (i.author === author) {
+			findBook.push(i);
+		}
+	}
+	return findBook;
+} */
+
+//let orwellBooks = findAuthor("George Orwell");
+
+for (const b of myBooks) {
+	console.log(b.title);
+}
+
+let numbers = [2, 3, 5];
+function sum(numberArray) {
+	let result = 0;
+	for (const i of numberArray) {
+		result += i;
+	}
+	return result;
+}
+console.log("\n", sum(numbers), "\n");
+
+for (let i = 0 - 3; i < 4; i++) {
+	if (i) {
+		console.log(i);
+	}
+}
+
+let shapes = ["triangle", "square", "pentagon", "circle"];
+
+function setLastValue(arr, str) {
+	let last = arr.length - 1;
+	arr[last] = str;
+}
+
+setLastValue(shapes, "hexagon");
+for (const i of shapes) {
+	console.log(i);
+}
