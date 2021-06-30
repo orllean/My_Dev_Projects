@@ -55,9 +55,9 @@ nav {
 
 main {
 	margin: auto;
-	background-color: white;
-	min-width: 400px;
+	min-width: 320px;
 	max-width: 800px;
+	background-color: white;
 }
 
 main h1 {
@@ -67,6 +67,10 @@ main h1 {
 
 main h2 {
 	font-family: var(--font2);
+}
+
+picture > img {
+	width: 100%;
 }
 
 div.video {
@@ -94,4 +98,5 @@ ul {
 footer {
 	color: white;
 	background-color: var(--cor5);
+	text-align: center;
 }
