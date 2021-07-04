@@ -325,7 +325,7 @@ console.log("\n", sum(numbers), "\n");
 
 for (let i = 0 - 3; i < 4; i++) {
 	if (i) {
-		console.log(i);
+		//console.log(i);
 	}
 }
 
@@ -340,3 +340,109 @@ setLastValue(shapes, "hexagon");
 for (const i of shapes) {
 	console.log(i);
 }
+
+function getNeighbor(arr, i) {
+	let neighborIndex = i + 1;
+	return arr[neighborIndex];
+}
+console.log(
+	"\n",
+	"The neighbor to " + shapes[1] + " is " + getNeighbor(shapes, 1),
+	"\n"
+);
+
+for (let index = 0; index < "fruit".length; index++) {
+	//console.log("fruit"[index]);
+}
+
+for (let index = 0; index < "fruit".length - 1; index++) {
+	let neighborIndex = index + 1;
+	//console.log("fruit"[index]);
+	//console.log("fruit"[neighborIndex]);
+}
+
+let obj = [];
+let str = "ORLEAN";
+
+for (let i = 0; i < str.length; i++) {
+	let letter = str[i];
+	obj[letter] = i;
+}
+
+//console.log("\n", obj, "\n");
+
+for (let property in obj) {
+	//console.log(property + ": " + obj[property]);
+}
+
+let randomWord = "tact";
+function check(space, word) {
+	if (space.length !== word.length) {
+		return false;
+	}
+	for (let i = 0; i < space.length; i++) {
+		if (space[i] !== "-" && space[i] !== word[i]) {
+			return false;
+		}
+	}
+	return true;
+}
+/* console.log('-a-t');
+console.log(randomWord);
+console.log(check('-a-t', randomWord)) */
+
+let stringSequence = ["Orlean", "Arthur", "Brisa"];
+function longestWord(arr) {
+	let biggestWord = "";
+	for (const word of arr) {
+		if (word.length > biggestWord.length) {
+			biggestWord = word;
+		}
+	}
+	return biggestWord;
+}
+console.log(stringSequence);
+console.log("O maior nome do array é:", longestWord(stringSequence), "\n");
+
+let string = "Arthur";
+function mapString(str) {
+	let map = {};
+	for (let i = 0; i < str.length; i++) {
+		let letter = str[i];
+		if (map[letter]) {
+			map[letter].push(i);
+		} else {
+			map[letter] = [i];
+		}
+	}
+	return map;
+}
+console.log(string, "\n");
+console.log(mapString(string), "\n");
+
+let stringMap = mapString(string);
+for (const letter in stringMap) {
+	console.log(letter, ": ", stringMap[letter]);
+}
+
+let dictionaryWord = "peals";
+let sequenceString = "abppplee";
+
+function compareLatters(word, object) {
+	for (const letter of word) {
+		if (object[letter]) {
+		} else {
+			return false;
+		}
+	}
+	return true;
+}
+console.log("\n");
+console.log(dictionaryWord);
+console.log(sequenceString);
+
+let stringSequenceMap = mapString(sequenceString);
+for (const letter in stringSequenceMap) {
+	console.log(letter, ": ", stringSequenceMap[letter]);
+}
+console.log(compareLatters(dictionaryWord, stringSequenceMap));
