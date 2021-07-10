@@ -310,7 +310,7 @@ orwellBooks.forEach(printBookByAuthor);
 //let orwellBooks = findAuthor("George Orwell");
 
 for (const b of myBooks) {
-	console.log(b.title);
+	//console.log(b.title);
 }
 
 let numbers = [2, 3, 5];
@@ -321,7 +321,7 @@ function sum(numberArray) {
 	}
 	return result;
 }
-console.log("\n", sum(numbers), "\n");
+//console.log("\n", sum(numbers), "\n");
 
 for (let i = 0 - 3; i < 4; i++) {
 	if (i) {
@@ -338,18 +338,18 @@ function setLastValue(arr, str) {
 
 setLastValue(shapes, "hexagon");
 for (const i of shapes) {
-	console.log(i);
+	//console.log(i);
 }
 
 function getNeighbor(arr, i) {
 	let neighborIndex = i + 1;
 	return arr[neighborIndex];
 }
-console.log(
+/* console.log(
 	"\n",
 	"The neighbor to " + shapes[1] + " is " + getNeighbor(shapes, 1),
 	"\n"
-);
+); */
 
 for (let index = 0; index < "fruit".length; index++) {
 	//console.log("fruit"[index]);
@@ -401,8 +401,8 @@ function longestWord(arr) {
 	}
 	return biggestWord;
 }
-console.log(stringSequence);
-console.log("O maior nome do array é:", longestWord(stringSequence), "\n");
+//console.log(stringSequence);
+//console.log("O maior nome do array é:", longestWord(stringSequence), "\n");
 
 let string = "Arthur";
 function mapString(str) {
@@ -417,16 +417,16 @@ function mapString(str) {
 	}
 	return map;
 }
-console.log(string, "\n");
-console.log(mapString(string), "\n");
+//console.log(string, "\n");
+//console.log(mapString(string), "\n");
 
 let stringMap = mapString(string);
 for (const letter in stringMap) {
-	console.log(letter, ": ", stringMap[letter]);
+	//console.log(letter, ": ", stringMap[letter]);
 }
 
-let dictionaryWord = "peals";
-let sequenceString = "abppplee";
+let dictionaryWord = "blue";
+let sequenceString = "hullabaloo";
 
 function compareLatters(word, object) {
 	for (const letter of word) {
@@ -437,12 +437,39 @@ function compareLatters(word, object) {
 	}
 	return true;
 }
-console.log("\n");
+//console.log("\n");
 console.log(dictionaryWord);
 console.log(sequenceString);
 
 let stringSequenceMap = mapString(sequenceString);
 for (const letter in stringSequenceMap) {
-	console.log(letter, ": ", stringSequenceMap[letter]);
+	//console.log(letter, ": ", stringSequenceMap[letter]);
 }
-console.log(compareLatters(dictionaryWord, stringSequenceMap));
+//console.log(compareLatters(dictionaryWord, stringSequenceMap));
+
+function findNextIndex(array, minIndex) {
+	for (const i of array) {
+		if (i >= minIndex) {
+			return i + 1;
+		}
+	}
+	return false;
+}
+
+function isSubsequence(word, map) {
+	let minIndex = 0;
+	for (let letter of word) {
+		if (map[letter]) {
+			minIndex = findNextIndex(map[letter], minIndex);
+			if (minIndex === false) {
+				return false;
+			}
+		} else {
+			return false;
+		}
+	}
+	return true;
+}
+
+let mappedString = mapString(sequenceString);
+console.log(isSubsequence(dictionaryWord, mappedString));
