@@ -21,16 +21,6 @@ function mapString(str) {
 	return map;
 }
 
-function compareLatters(word, object) {
-	for (const letter of word) {
-		if (object[letter]) {
-		} else {
-			return false;
-		}
-	}
-	return true;
-}
-
 function findNextIndex(array, minIndex) {
 	for (const i of array) {
 		if (i >= minIndex) {

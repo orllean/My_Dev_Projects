@@ -438,8 +438,8 @@ function compareLatters(word, object) {
 	return true;
 }
 //console.log("\n");
-console.log(dictionaryWord);
-console.log(sequenceString);
+/* console.log(dictionaryWord);
+console.log(sequenceString); */
 
 let stringSequenceMap = mapString(sequenceString);
 for (const letter in stringSequenceMap) {
@@ -472,4 +472,62 @@ function isSubsequence(word, map) {
 }
 
 let mappedString = mapString(sequenceString);
-console.log(isSubsequence(dictionaryWord, mappedString));
+//console.log(isSubsequence(dictionaryWord, mappedString));
+
+// console.log(i + ': ' + goods.includes(i)) ; verifica se o item esta contido no array
+let goods = ["food", "books"];
+let shoppingList = ["clothing", "food", "books", "toiletries", "books"];
+
+for (const i of shoppingList) {
+	console.log(i + ": " + goods.includes(i));
+}
+
+let favorite = "books";
+console.log(
+	"\n",
+	shoppingList.includes(favorite)
+		? shoppingList.indexOf(favorite)
+		: "Not on the list"
+);
+console.log(shoppingList.lastIndexOf(favorite), "\n");
+//console.log(favorite.indexOf('s'));
+
+//console.log('\n', shoppingList.shift());
+//console.log(shoppingList.shift(), '\n');
+
+//shoppingList.reverse();
+
+shoppingList.forEach((element) => {
+	console.log(element);
+});
+
+console.log(shoppingList.join(" & "));
+
+/* let firstGoods = shoppingList.shift();
+firstGoods = 'pen';
+shoppingList.unshift(firstGoods); 
+
+shoppingList.forEach((element) => {
+	console.log(element);
+});*/
+
+let shirtSize = ["s", "m", "l", "xxl"];
+let startPoint = 1;
+let itemsToReplace = 2;
+let newItem = "xl";
+
+console.log("old size: " + shirtSize);
+
+shirtSize.splice(startPoint, itemsToReplace, newItem);
+console.log("new size: " + shirtSize);
+
+let titelBook = (book) => {
+	return book.title;
+};
+
+let authorBook = (book) => {
+	return book.author;
+};
+
+console.log(titelBook(myBooks[0]));
+console.log(authorBook(myBooks[0]));
