@@ -516,10 +516,10 @@ let startPoint = 1;
 let itemsToReplace = 2;
 let newItem = "xl";
 
-console.log("old size: " + shirtSize);
+//console.log("old size: " + shirtSize);
 
 shirtSize.splice(startPoint, itemsToReplace, newItem);
-console.log("new size: " + shirtSize);
+//console.log("new size: " + shirtSize);
 
 let titelBook = (book) => {
 	return book.title;
@@ -531,3 +531,30 @@ let authorBook = (book) => {
 
 console.log(titelBook(myBooks[0]));
 console.log(authorBook(myBooks[0]));
+
+let names = myBooks.map((element) => {
+	return element.author;
+});
+
+let title = myBooks.map((element) => {
+	return element.title;
+});
+
+console.log("Names: " + names);
+console.log("Titles: " + title);
+
+let impar = [1, 3, 5, 7, 9];
+let total = impar.reduce((sum, num) => {
+	return sum + 2 * num;
+}, 0);
+console.log(total);
+
+let shopp = shoppingList.reduce((final, item) => {
+	return final + (item + ", ");
+}, "");
+console.log(shopp);
+
+string = "all your base are belog to us";
+const regex = /base/;
+const isExisting = regex.test(string);
+console.log(isExisting);

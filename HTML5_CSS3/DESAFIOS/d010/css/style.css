@@ -31,28 +31,48 @@ body {
 	background-color: var(--cor1);
 }
 
+a.externo::after {
+	content: "\00A0\1F517";
+}
+
 header {
-	background-image: linear-gradient(to bottom, var(--cor0), var(--cor3));
-	height: 100px;
+	background-image: linear-gradient(to bottom, var(--cor3), var(--cor5));
+	min-height: 150px;
+	text-align: center;
 }
 
 header > h1 {
 	color: white;
-	text-align: center;
 	font-family: var(--font2);
 	padding-top: 20px;
+	padding-bottom: 20px;
+	text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
 }
 
 header > p {
 	color: white;
-	text-align: center;
 	font-family: var(--font1);
+	padding: 0px 10px;
 }
 
 nav {
 	height: 30px;
-	padding: 10px;
 	background-color: var(--cor5);
+	box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.2);
+}
+
+nav > a {
+	color: white;
+	padding: 10px;
+	text-decoration: none;
+	transition-duration: 0.2s;
+	border-radius: 5px;
+}
+
+nav > a:hover {
+	color: var(--cor5);
+	font-weight: bold;
+	background-color: var(--cor3);
 }
 
 main {
@@ -63,7 +83,7 @@ main {
 	padding: 20px;
 	border-bottom-left-radius: 10px;
 	border-bottom-right-radius: 10px;
-	box-shadow: 0 0 20px rgba(0, 0, 0, 0.411);
+	box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
 	background-color: white;
 }
 
@@ -74,9 +94,39 @@ main h1 {
 
 main h2 {
 	font-family: var(--font2);
+	color: var(--cor4);
+	font-size: 1.2em;
+	background-image: linear-gradient(to right, var(--cor1), transparent);
+	padding: 5px;
+}
+
+main p {
+	margin: 15px 0;
+	text-align: justify;
+	text-indent: 30px;
+	line-height: 1.5em;
+}
+
+main strong {
+	color: var(--cor5);
+	font-weight: bold;
+}
+
+main a {
+	text-decoration: none;
+	color: white;
+	background-color: var(--cor5);
+	padding: 3px 6px;
+	transition-duration: 0.5s;
+}
+main a:hover {
+	color: var(--cor5);
+	background-color: var(--cor2);
+	text-decoration: underline;
 }
 
 main img.pequena {
+	max-width: 350px;
 	display: block;
 	margin: auto;
 }
@@ -101,7 +151,22 @@ div.video > iframe {
 	height: 90%;
 }
 
-ul {
+aside {
+	background-color: var(--cor0);
+	padding: 10px;
+	border-radius: 10px;
+	box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
+}
+
+aside > h3 {
+	color: white;
+	background-color: var(--cor4);
+	padding: 10px;
+	margin: -10px;
+	border-radius: 10px 10px 0 0;
+}
+
+aside > ul {
 	list-style-type: "\2714\0020\0020";
 	columns: 2;
 	list-style-position: inside;
@@ -111,6 +176,18 @@ footer {
 	height: 30px;
 	padding: 10px;
 	color: white;
-	background-color: var(--cor5);
 	text-align: center;
+	background-color: var(--cor5);
+	font-size: 0.8em;
+}
+
+footer a {
+	color: white;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+footer a:hover {
+	color: var(--cor1);
+	text-decoration: underline;
 }

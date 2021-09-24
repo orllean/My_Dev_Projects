@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- https://www.w3schools.com/html/html_head.asp -->
+  <meta charset="UTF-8">
+  <meta http-equiv="refresh" content="30">
+  <meta name="description" content="My homework">
+  <meta name="keywords" content="HTML, CSS, JavaScript">
+  <meta name="author" content="Orlean Costa">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ClassAttJavaScript</title>
+</head>
+
+<body>
+  <p id="demo"></p>
+
+  <h2>Use of The class Attribute in JavaScript</h2>
+  <p>Click the button to hide all elements with class name "city":</p>
+  <button onclick="myFunction()">Hide elements</button>
+  <h2 class="city">London</h2>
+  <p>London is the capital of England.</p>
+  <h2 class="city">Paris</h2>
+  <p>Paris is the capital of France.</p>
+  <h2 class="city">Tokyo</h2>
+  <p>Tokyo is the capital of Japan.</p>
+
+  <p id="demo2"></p>
+
+  <h2>JavaScript Array Methods</h2>
+  <h2>toString()</h2>
+  <p>The toString() method returns an array as a comma separated string:</p>
+  <p id="toString"></p>
+
+  <h2>join()</h2>
+  <p>The join() method joins array elements into a string.</p>
+  <p>It this example we have used " - " as a separator between the elements:</p>
+  <p id="join"></p>
+
+  <h2>pop()</h2>
+  <p>The pop() method removes the last element from an array.</p>
+  <p id="pop1"></p>
+  <p id="pop2"></p>
+  <p id="pop3"></p>
+
+  <h2>push()</h2>
+  <p>The push() method appends a new element to an array.</p>
+  <p id="push1"></p>
+  <p id="push2"></p>
+  <button onclick="fPush()">Try it</button>
+
+  <h2>splice()</h2>
+  <p>The splice() method adds new elements to an array, and returns an array with the deleted elements (if any).</p>
+  <p>The first parameter (2) defines the position where new elements should be added (spliced in).
+    The second parameter (0) defines how many elements should be removed. The rest of the parameters ("Lemon" , "Kiwi")
+    define the new elements to be added. The splice() method returns an array with the deleted items:</p>
+  <p id="splice1"></p>
+  <p id="splice2"></p>
+  <p id="splice3"></p>
+  <button onclick="fSplice()">Try it</button>
+
+  <h2>Using splice() to Remove Elements</h2>
+  <p>With clever parameter setting, you can use splice() to remove elements without leaving "holes" in the array:</p>
+  <code>
+  const fruits = ["Banana", "Orange", "Apple", "Mango"];<br>
+  fruits.splice(0, 1);   // Removes the first element
+  </code>
+
+  <h2>concat()</h2>
+  <p>The concat() method is used to merge (concatenate) arrays.</p>
+  <p>The concat() method creates a new array by merging (concatenating) existing arrays: The concat() method does not
+    change the existing arrays. It always returns a new array. The concat() method can take any number of array
+    arguments. The concat() method can also take strings as arguments.</p>
+  <p id="concat1"></p>
+  <p id="concat2"></p>
+  <p id="concat3"></p>
+  <p id="concat4"></p>
+
+  <h2>slice()</h2>
+  <p>The slice() method slices out a piece of an array into a new array. When the slice() method is given two arguments,
+    it selects array elements from the start argument, and up to (but
+    not included) the end argument. The slice() method creates a new array. It does not remove any elements from the
+    source array. If the end argument is omitted, the slice() method slices out the rest of
+    the array.</p>
+  <p id="slice1"></p>
+  <p id="slice2"></p>
+  <p id="slice3"></p>
+
+  <h2>JavaScript Array Sort</h2>
+  <p>The sort() method sorts an array alphabetically.</p>
+  <p id="sort"></p>
+  <button onclick="fShort()">Try it</button>
+
+  <h2>JavaScript Array Sort Reverse</h2>
+  <p>The reverse() method reverses the elements in an array.</p>
+  <p>By combining sort() and reverse() you can sort an array in descending order.</p>
+  <p id="reverse"></p>
+  <button onclick="fReverse()">Try it</button>
+
+  <h2>JavaScript Array Sort by Number ASC</h2>
+  <p>By default, the sort() function sorts values as strings.
+    This works well for strings ("Apple" comes before "Banana").
+    However, if numbers are sorted as strings, "25" is bigger than "100", because "2" is bigger than "1".
+    Because of this, the sort() method will produce incorrect result when sorting numbers.
+    You can fix this by providing a compare function:</p>
+  <p>Click the buttons to sort the array alphabetically or numerically.</p>
+  <p id="sortNum"></p>
+  <button onclick="fAlpha()">Sort Alphabetically</button>
+  <button onclick="fNum()">Sort Numerically</button>
+
+  <h2>JavaScript Array Sort in Random Order</h2>
+  <p>Click the button (again and again) to sort the array in random order.</p>
+  <p id="random"></p>
+  <button onclick="fRandom()">Try it</button>
+
+  <p>The Fisher Yates Method <br>
+    The above example, array.sort(), is not accurate, it will favor some numbers over the others.
+    The most popular correct method, is called the Fisher Yates shuffle, and was introduced in data science as early as
+    1938! In JavaScript the method can be translated to this:</p>
+
+  <h2>JavaScript Array Sort</h2>
+  <h3>The Fisher Yates Method</h3>
+  <p>Click the button (again and again) to sort the array in random order.</p>
+  <p id="yates"></p>
+  <button onclick="fYates()">Try it</button>
+
+  <h2>Find the Highest (or Lowest) Array Value</h2>
+  <p>
+    There are no built-in functions for finding the max or min value in an array. However, after you have sorted an
+    array, you can use the index to obtain the highest and lowest values.
+  </p>
+
+  <h3>Sorting ascending:</h3>
+  <p>Original Array: <span id="points"></span></p>
+  <p>The lowest number is <span id="low"></span>.</p>
+  <p>The highest number is <span id="hight"></span>.</p>
+
+  <script>
+    const fruits = ["Banana", "Orange", "Apple", "Mango"];
+    var text = document.getElementById("demo");
+    var x = document.getElementsByClassName("city");
+    var city = [];
+    var listFrut = document.getElementById('demo2');
+    var toStringTag = document.getElementById('toString');
+
+    function myFunction() {
+      for (var i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+
+    }
+
+    for (const i of x) {
+      city.push(i.innerHTML);
+    }
+    text.innerHTML = city
+    // text.innerHTML = x.length; 
+
+    text.style.color = '#666666';
+    text.style.fontSize = '25px';
+    text.style.backgroundColor = 'yellow'
+
+    var list = '<ul>';
+    for (const f of fruits) {
+      list += '<li>' + f + '</li>'
+    }
+    list += '</ul>'
+    listFrut.innerHTML = list;
+
+    /* let text = "<ul>";
+    fruits.forEach(myFunction);
+    text += "</ul>";
+    document.getElementById("demo2").innerHTML = text;
+
+    function myFunction(value) {
+      text += "<li>" + value + "</li>";
+    } */
+
+    toStringTag.innerHTML = fruits.toString();
+
+    document.getElementById('join').innerHTML = fruits.join(' - ');
+
+    document.getElementById('pop1').innerHTML = fruits;
+    let string = fruits.pop();
+    document.getElementById('pop2').innerHTML = fruits;
+    document.getElementById('pop3').innerHTML = string;
+
+    document.getElementById('push1').innerHTML = fruits;
+    function fPush() {
+      fruits.push(string);
+      document.getElementById('push2').innerHTML = fruits
+    }
+    fruits.push(string);
+    function fSplice() {
+      document.getElementById('splice1').innerHTML = 'Original Array:<br>' + fruits;
+      let removed = fruits.splice(2, 2, 'lemon', 'kiwi');
+      document.getElementById('splice2').innerHTML = 'New Array:<br>' + fruits;
+      document.getElementById('splice3').innerHTML = 'Removed Itens:<br>' + removed;
+    }
+
+    const myGirls = ["Cecilie", "Lone"];
+    const myBoys = ["Emil", "Tobias", "Linus"];
+    const myParents = ['Teita', 'Iris'];
+    const myChildren = myGirls.concat(myBoys);
+    const family = myParents.concat(myBoys, myGirls, 'Rosa');
+    document.getElementById('concat1').innerHTML = 'myGirls: ' + myGirls.join(', ');
+    document.getElementById('concat2').innerHTML = 'myBoys: ' + myBoys.join(', ');
+    document.getElementById('concat3').innerHTML = 'myChildren: ' + myChildren.join(', ');
+    document.getElementById('concat4').innerHTML = 'myFamily: ' + family.join(', ');
+
+    const slice1arg = fruits.slice(1);
+    const slice2arg = fruits.slice(0, 2);
+    document.getElementById('slice1').innerHTML = 'Original Array: ' + fruits.join(', ');
+    document.getElementById('slice2').innerHTML = 'New Array with one argument(1): ' + slice1arg.join(', ');
+    document.getElementById('slice3').innerHTML = 'New Array with two arguments(0, 2): ' + slice2arg.join(', ');
+
+    document.getElementById('sort').innerHTML = fruits.join(', ');
+    function fShort() {
+      fruits.sort();
+      document.getElementById('sort').innerHTML = fruits.join(', ');
+    }
+
+    document.getElementById('reverse').innerHTML = fruits.join(', ');
+    function fReverse() {
+      fruits.sort();
+      fruits.reverse();
+      document.getElementById('reverse').innerHTML = fruits.join(', ');
+    }
+
+    const points = [40, 100, 1, 5, 25, 10];
+    document.getElementById('sortNum').innerHTML = points.join(', ');
+    function fNum() {
+      points.sort(function (a, b) { return a - b });
+      document.getElementById('sortNum').innerHTML = points.join(', ');
+    }
+    function fAlpha() {
+      points.sort();
+      document.getElementById('sortNum').innerHTML = points.join(', ');
+    }
+
+    document.getElementById('random').innerHTML = points.join(', ');
+    function fRandom() {
+      points.sort(function (a, b) { return 0.5 - Math.random() });
+      document.getElementById('random').innerHTML = points.join(', ');
+    }
+
+    document.getElementById('yates').innerHTML = points.join(', ');
+    function fYates() {
+      for (let i = points.length - 1; i > 0; i--) {
+        let j = Math.floor(Math.random() * i)
+        let k = points[i]
+        points[i] = points[j]
+        points[j] = k
+      }
+      document.getElementById('yates').innerHTML = points.join(', ');
+    }
+
+    document.getElementById('points').innerHTML = points.join(', ');
+
+    points.sort(function (a, b) { return a - b });
+    document.getElementById('low').innerHTML = points[0];
+    // now points[0] contains the lowest value
+    // and points[points.length-1] contains the highest value
+
+    points.sort(function (a, b) { return b - a });
+    document.getElementById('hight').innerHTML = points[0];
+    // now points[0] contains the highest value
+    // and points[points.length-1] contains the lowest value
+
+
+
+
+
+  </script>
+
+</body>
+
+</html>
