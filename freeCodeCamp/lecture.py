@@ -203,7 +203,7 @@ print(all_done)
 
 # chapter 6
 # strings
-# we can get at any single character by use index  in square brakts.
+# we can get at any single character by use index in square brakts.
 # It's stars at zero
 # loop through strings using while staement
 fruit = 'banana maça'
@@ -300,3 +300,30 @@ print(data[(s + 1):e])
 
 # chapter 7
 # reading files
+path2 = 'freeCodeCamp/code3/mbox-short.txt'
+# file handle as a sequence of strings
+# here each line is a string in the sequence
+arq = open(path2)
+print(arq)
+for i in arq:
+    if not '@uct.ac.za' in i:  # line printed with criteria
+        continue  # lead to the for statement
+    print(i[:-1])
+print()
+path1 = 'freeCodeCamp/code3/mbox.txt'
+try:
+    arq = open(path1)
+except:
+    print(f'{path1} - cannot be opened ')
+    quit()
+c = 0
+for i in arq:
+    c += 1
+    if i.startswith('From'):  # line printed with criteria
+        print(i[:-1])
+print(c)  # printed number of lines in arq
+# reading the whole file into a single string
+arq = open(path2)
+arq = arq.read()
+len(arq)  # total caracters in arq
+print(arq[:51])

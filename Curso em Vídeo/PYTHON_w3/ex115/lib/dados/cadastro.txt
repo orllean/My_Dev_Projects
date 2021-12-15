@@ -1,0 +1,8 @@
+leo;50
+amaral;55
+brisa;14
+arthur;11
+rosa;60
+maria;6
+joice;23
+pedro;89
