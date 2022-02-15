@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -10,7 +10,7 @@
 
 <body>
     <?php
-    for ($i = 0; $i < 10; $i++) {
+    for ($i = 1; $i <= 10; $i++) {
         print("Linha número " . $i . "<br />");
     }
     ?>
