@@ -13,8 +13,12 @@
 section {
 	padding: 45px 0;
 }
-p,
+
 img {
 	padding-top: 15px;
-    border-radius: 35px;
+	border-radius: 35px;
+}
+
+p {
+	padding-top: 15px;
 }
