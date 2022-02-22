@@ -15,13 +15,13 @@ body {
 	color: white;
 }
 header .container {
+	height: 50px;
 	display: flex;
 	flex-direction: row;
 	align-items: center;
 	justify-content: space-between;
 }
 header #logo {
-	margin-left: 20px;
 	font-size: 30px;
 	font-family: Arial, Helvetica, sans-serif;
 	font-weight: bolder;
@@ -51,10 +51,12 @@ header nav a:hover {
 }
 
 .filme-principal .descricao {
+	margin-top: 10px;
 	margin-bottom: 40px;
 }
 
 .titulo {
+	margin-top: 15%;
 	font-size: 40px;
 	font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
 		"Lucida Sans", Arial, sans-serif;
@@ -63,9 +65,37 @@ header nav a:hover {
 .botao {
 	background-color: rgba(0, 0, 0, 0.5);
 	border: none;
+	border-radius: 5px;
 	color: white;
-
 	padding: 15px 30px;
 	margin-left: 15px;
-	font-size: 12px;
+	font-size: 14px;
+	cursor: pointer;
+	transition: .3s ease all;
+}
+
+.botao:hover {
+	background-color: white;
+	color: black;
+}
+
+.botao i {
+	margin-right: 10px;
+}
+
+.container {
+	margin-left: 20px;
+}
+
+.filme-principal .container {
+	width: 70%;
+}
+
+.carousel-filme {
+	max-height: 30px;
+}
+
+.box-filme {
+	max-width: 100%;
+	display: block;
 }
