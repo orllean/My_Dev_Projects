@@ -10,7 +10,7 @@ btAdd.addEventListener("click", function (evt) {
 function addToDo() {
 	const div = document.createElement("div");
 	if (taskInput.value !== "") {
-		div.innerHTML = `<input type="checkbox" name="task" id="task"> <label for=${taskInput.value}>${taskInput.value}</label>`;
+		div.innerHTML = `<input type="checkbox" name=${taskInput.value} id=${taskInput.value}> <label for=${taskInput.value}>${taskInput.value}</label>`;
 		tasks.append(div);
 		taskInput.value = "";
 	} else {
