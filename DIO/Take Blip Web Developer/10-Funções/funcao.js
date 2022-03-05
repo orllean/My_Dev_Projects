@@ -19,7 +19,6 @@ const soma2 = (a, b) => {
 //console.log(soma(5, 8));
 
 //Função autoinvocavel
-
 (function () {
 	let name = "1-orlean";
 	//return console.log(name);
@@ -35,7 +34,6 @@ const fullName = (function (a, b) {
 	return name;
 })("3-orlean", "costa");
 //console.log(fullName);
-
 (() => console.log(`Welcome ${fullName}!`))();
 // callback
 function calc(opc, a, b) {
@@ -54,7 +52,8 @@ function mult(a = 1, b = 1) {
 	return a * b;
 }
 console.log(mult());
-//parametro indefinido
+
+//parametro indefinido e uso do arguments
 function findMax() {
 	let max = -Infinity;
 	for (let i = 0; i < arguments.length; i++) {
@@ -74,6 +73,7 @@ console.log(sum(...numbers));
 
 let numberStore = [0, 1, 2];
 let newNumber = 12;
+
 // numberStore = [numberStore, newNumber]; [ [ 0, 1, 2 ], 12 ]
 numberStore = [...numberStore, newNumber]; // [ 0, 1, 2, 12
 console.log(numberStore);
@@ -83,11 +83,13 @@ function fullname2(name, surname) {
 }
 let people = ["4-orlean", "costa"];
 console.log(fullname2(...people));
+
 // arrays rest - The rest parameter syntax allows a function to accept an indefinite number of arguments as an array, providing a way to represent variadic functions in JavaScript. combina seus elementos em um array
 function myFun(...theArgs) {
 	console.log(theArgs);
 }
 myFun("one", "two", "three", "four", "five", "six");
+
 //Destructuring assignment - The destructuring assignment syntax is a JavaScript expression that makes it possible to unpack values from arrays, or properties from objects, into distinct variables.
 const user = {
 	id: 42,
@@ -102,6 +104,7 @@ const { id, displayName, Name = "Zé" } = user;
 console.log(id);
 console.log(displayName);
 console.log(Name);
+
 // Unpacking properties from objects passed as a function parameter
 function userId({ id }) {
 	return id;
@@ -114,9 +117,57 @@ function userFullName({
 	return `${name} ${surname}`;
 }
 console.log(userFullName(user));
-//loops
 
-/* let a = 4;
-let b = 2;
-const c = () => a + b + 100
-console.log(c()); */
+// this
+const aluno = {
+	id: 155,
+	fullNome: "orlean almeida costa",
+	nasc: 1971,
+	nameSurname: function () {
+		const arr = this.fullNome.split(" ");
+		const fName = arr[0];
+		const lName = arr[arr.length - 1];
+		return fName + " " + lName;
+	},
+	idade: function () {
+		return new Date().getFullYear() - this.nasc;
+	},
+};
+console.log(aluno.nameSurname());
+console.log(aluno.idade());
+
+//call
+const pessoa = {
+	nome: "Leo",
+};
+const animal = {
+	nome: "Ted",
+};
+function getSomething() {
+	console.log(this.nome);
+}
+getSomething.call(animal);
+
+//call com parâmetros
+const myObj = {
+	n1: 2,
+	n2: 4,
+};
+function soma3(a, b) {
+	console.log(this.n1 + this.n2 + a + b);
+}
+soma3.call(myObj, 1, 5);
+
+//apply
+getSomething.apply(pessoa);
+soma3.apply(myObj, [1, 5]);
+
+//bind
+const rNome = function () {
+	return this.nome;
+};
+let leo = rNome.bind({ nome: "Leo" });
+
+console.log(leo());
+
+//arrow
