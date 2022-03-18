@@ -2,6 +2,10 @@
 >
 > ## [AULA 1: VARIÁVEIS, OPERAÇÕES E MÉDIA](https://www.youtube.com/watch?v=X9hXiRhB838&t=2887s)
 
+#### Nesta primeira aula da Imersão Dev, vamos criar uma calculadora de média e aprender o que são variáveis e como realizar operações! O código da aula inicial para você acompanhar está aqui:
+
+[https://codepen.io/imersao-dev/pen/38cf7906dcec352d8dbd0f8c4c7c1b10](https://codepen.io/imersao-dev/pen/38cf7906dcec352d8dbd0f8c4c7c1b10)
+
 ### Conteúdo detalhado desta aula
 
 - Criar uma conta no CodePen;
