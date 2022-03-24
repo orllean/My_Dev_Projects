@@ -10,19 +10,32 @@
 </head>
 
 <body>
-    <div class="container">
-        <h1 class="page-title">
-            Calculadora de média - Desafio</h1>
-        <p class="page-subtitle">
-            Descubra qual a sua média de nota de todas as provas!
-        </p>
-        <img src="https://www.alura.com.br/assets/img/imersoes/dev-2021/logo-imersao-conversor-de-moedas.svg"
-            class="page-logo" alt="">
-    </div>
-    <a href="https://alura.com.br/" target="_blank">
-        <img src="https://www.alura.com.br/assets/img/home/alura-logo.svg" alt="" class="alura-logo">
-    </a>
+    <main>
+
+        <header class="container">
+            <h1 class="page-title">
+                Calculadora de média - Desafio</h1>
+            <p class="page-subtitle">
+                Descubra qual a sua média de nota de todas as provas! * Informe ao menos duas notas
+            </p>
+            <img src="https://www.alura.com.br/assets/img/imersoes/dev-2021/logo-imersao-conversor-de-moedas.svg"
+                class="page-logo" alt="">
+            <a href="https://alura.com.br/" target="_blank">
+                <img src="https://www.alura.com.br/assets/img/home/alura-logo.svg" alt="" class="alura-logo">
+            </a>
+        </header>
+
+        <section id="notas">
+            <div><label for="">1ª Nota</label><input class="nota" type="number" name="" min='0'></div>
+            <div><label for="">2ª Nota</label><input class="nota" type="number" name="" min='0'></div>
+            <div><label for="">3ª Nota</label><input class="nota" type="number" name="" min='0'></div>
+            <div><label for="">4ª Nota</label><input class="nota" type="number" name="" min='0'></div>
+        </section>
+
+        <section id="resultado"></section>
+
+        <button id="calcular" type="submit" disabled>Média</button>
+    </main>
     <script src="script.js"></script>
-</body>
 
 </html>
