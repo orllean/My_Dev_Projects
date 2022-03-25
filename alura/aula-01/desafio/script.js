@@ -52,8 +52,8 @@ function limpaNotas() {
 function main() {
 	if (empty()) {
 		alert("*Todas as notas são requeridas.");
-	} else {
-		resultado(media(getNotas()));
-		limpaNotas();
+		return;
 	}
+	resultado(media(getNotas()));
+	limpaNotas();
 }
