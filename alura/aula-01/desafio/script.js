@@ -3,7 +3,6 @@ const btCalcular = document.querySelector("#calcular");
 const tagResultado = document.querySelector("#resultado");
 
 btCalcular.addEventListener("click", main);
-tagResultado.style.display = "none";
 
 function empty() {
 	let isEmpt = false;
@@ -29,7 +28,6 @@ function media(arr) {
 }
 
 function resultado(media) {
-	tagResultado.style.display = "block";
 	let label = `Com a média de ${media} você está`;
 	switch (true) {
 		case media < 5:

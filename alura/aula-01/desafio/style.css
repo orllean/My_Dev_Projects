@@ -82,7 +82,8 @@ input {
 	background-color: var(--dark-color);
 	color: var(--light-color);
 	font-size: 1.2em;
-	max-width: 337px;
+	width: 337px;
+	height: 46px;
 }
 
 #calcular {
