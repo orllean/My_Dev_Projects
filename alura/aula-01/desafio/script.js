@@ -36,7 +36,6 @@ function resultado(media) {
 		case media < 7:
 			tagResultado.textContent = `${label} EM RECUPERAÇÃO!`;
 			break;
-
 		default:
 			tagResultado.textContent = `${label} APROVADO!`;
 			break;
