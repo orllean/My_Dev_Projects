@@ -1,0 +1,52 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+:root {
+	--light-color: antiquewhite;
+	--dark-color: rgb(161, 126, 9);
+	--dark-color-over: rgb(102, 80, 9);
+}
+
+body {
+	font-family: "Roboto Mono", monospace;
+	height: 100vh;
+}
+main {
+	display: flex;
+	background-image: url("https://cdn-japantimes.com/wp-content/uploads/2019/03/p7-flam-a-20190303.jpg");
+	background-position: center;
+	height: 100%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	flex-direction: column;
+	align-items: center;
+}
+
+.container {
+	text-align: center;
+	padding: 20px;
+	min-height: 230px;
+}
+
+.page-title {
+	color: var(--light-color);
+	margin-bottom: 15px;
+}
+
+.page-subtitle {
+	color: var(--light-color);
+	margin-bottom: 15px;
+}
+
+.page-logo {
+	width: 200px;
+}
+
+.alura-logo {
+	width: 40px;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+}
