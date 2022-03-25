@@ -3,36 +3,40 @@
 	padding: 0;
 }
 
+:root {
+	--light-color: antiquewhite;
+	--dark-color: rgb(161, 126, 9);
+	--dark-color-over: rgb(102, 80, 9);
+}
+
 body {
 	font-family: "Roboto Mono", monospace;
-	min-height: 400px;
-	background-color: rgb(8, 8, 12);
 	height: 100vh;
 }
 main {
 	display: flex;
-	flex-direction: column;
-	align-items: center;
 	background-image: url("https://st.depositphotos.com/1025323/2685/i/950/depositphotos_26855445-stock-photo-mathematics-background.jpg");
 	background-position: center;
 	height: 100%;
 	background-repeat: no-repeat;
 	background-size: cover;
+	flex-direction: column;
+	align-items: center;
 }
 
 .container {
 	text-align: center;
 	padding: 20px;
-	min-height: 250px;
+	min-height: 230px;
 }
 
 .page-title {
-	color: #ffffff;
+	color: var(--light-color);
 	margin-bottom: 15px;
 }
 
 .page-subtitle {
-	color: #ffffff;
+	color: var(--light-color);
 	margin-bottom: 15px;
 }
 
@@ -51,7 +55,6 @@ main {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	margin-bottom: 60px;
 }
 
 .nota {
@@ -61,9 +64,9 @@ main {
 
 label {
 	font-size: 1.2em;
-	color: antiquewhite;
+	color: var(--light-color);
 	padding: 3px 6px;
-	background-color: dimgray;
+	background-color: var(--dark-color);
 	border-radius: 5px 0 0 0;
 }
 
@@ -72,11 +75,26 @@ input {
 	padding-left: 6px;
 }
 
+#resultado {
+	margin-bottom: 60px;
+	padding: 3px 6px;
+	border-radius: 5px 0 0 0;
+	background-color: var(--dark-color);
+	color: var(--light-color);
+	font-size: 1.2em;
+	max-width: 337px;
+}
+
 #calcular {
 	padding: 3px 6px;
 	font-size: 1.2em;
-	background-color: dimgray;
-	color: antiquewhite;
-	width: 140px;
+	background-color: var(--dark-color);
+	color: var(--light-color);
+	width: 337px;
 	border-radius: 5px 0 0 0;
+}
+
+#calcular:hover {
+	background-color: var(--dark-color-over);
+	cursor: pointer;
 }
