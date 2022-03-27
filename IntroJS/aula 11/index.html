@@ -9,9 +9,21 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body onload="carregou()">
+<body onLoad="carregou()" onScroll="rolou()">
     <main id="tela">
-        <h1 id="titulo" onmouseover="focou()">Aula 11</h1>
+        <h1 id="titulo" onMouseOver="sobreH1()">Aula 11</h1>
+        <section id="conteudo">
+            <article class="box"></article>
+            <article class="box"></article>
+            <button id="btn1" class="botao">Box1</button>
+            <button id="btn2" class="botao">Box2</button>
+        </section>
+        <hr>
+        <form action="">
+            <input id='input' type="text" placeholder="Digite seu nome" onFocus='ganhaFocoInput()'
+                onFocusOut='perdeFocoInput()' onKeyPress='presTeclaInput()' />
+            <button id="btn3" class="botao" typy="submit">Enviar</button>
+        </form>
     </main>
     <script src="script.js"></script>
 </body>
