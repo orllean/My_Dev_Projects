@@ -14,7 +14,7 @@ document.write(`
         <p>${idade} anos </p>
         <p>${peso} Kg </p>
         <p>${altura} m </p>
-    <div>
+    </div>
 `);
 
 /* Desafio 02 */
@@ -26,7 +26,7 @@ const FraseDoDia =
 const Autoria = "Aaron Swartz";
 
 document.write(`
-    <div class="hCitacao">
+    <div class="citacao">
         <h2>Frase do dia</h2>
         <h3>${dia}/${mes}/${ano}</h3>
         <blockquote>&#10077;<cite>${FraseDoDia}</cite>&#10078;</blockquote>

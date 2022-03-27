@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Special+Elite&display=swap");
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+h2 {
+	font-size: 1.5rem;
+}
+
+/* Desafio 1 */
+.card {
+	font-family: "Roboto", sans-serif;
+	width: 280px;
+	height: 100%;
+	margin: 1rem;
+	padding: 1rem;
+	border-radius: 8px;
+	background-color: #222;
+	border: 5px solid #444;
+	box-shadow: 0 0 5px #222;
+	color: #191919;
+	font-size: 0.95rem;
+}
+
+.card h2 {
+	font-size: 1.5rem;
+	text-align: center;
+	color: #ececec;
+	margin-bottom: 0.625rem;
+}
+
+.card img {
+	width: 100%;
+	border-radius: 8px;
+	border: 5px solid #444;
+	margin-bottom: 1rem;
+}
+
+.card p {
+	background-color: #ececec;
+	border-radius: 5px;
+	padding: 5px;
+	margin-bottom: 0.625rem;
+}
+/* Desafio 2 */
+.citacao {
+	font-family: "Special Elite";
+	max-width: 280px;
+	max-height: 400px;
+	margin: 1rem;
+	padding: 1.5rem;
+	border-radius: 15px 0;
+	box-shadow: 0 0 5px;
+
+	background-image: url(img/textura.jpg);
+	color: #222;
+}
+
+.citacao h2 {
+	margin-bottom: 0.625rem;
+}
+
+.citacao h3 {
+	font-size: 0.95rem;
+	margin-bottom: 0.625rem;
+}
+
+.citacao blockquote {
+	margin-left: 2rem;
+	margin-bottom: 0.625rem;
+	font-size: 1.5rem;
+	font-weight: 400;
+	font-style: italic;
+	line-height: 2rem;
+}
+
+.citacao p {
+	text-align: right;
+}
+/* Desafio 3 */
+.meses {
+	width: 280px;
+	margin: 1rem;
+	padding: 1rem;
+	background-color: #ececec;
+	box-shadow: 2px 2px 5px #222;
+	font-family: "Roboto", sans-serif;
+}
+/* Desafio 4 */
+.jogo {
+	width: 280px;
+	height: 100%;
+	margin: 1rem;
+	padding: 1rem;
+	line-height: 2rem;
+	font-family: "Roboto", sans-serif;
+	color: #ececec;
+
+	background-image: url(img/fundo-lol.PNG);
+	background-repeat: no-repeat;
+	background-size: cover;
+	border-radius: 10px;
+	box-shadow: 0px 0px 5px #222;
+}
+
+.jogo h2 {
+	margin-bottom: 1rem;
+	text-shadow: 1px 1px 1px #222;
+}
+
+.jogo span {
+	display: block;
+	font-size: 0.8rem;
+	text-shadow: 1px 1px 1px #222;
+}
+
+.jogo p {
+	color: #191919;
+	background-color: #ececec;
+	border-radius: 8px;
+	padding: 3px 10px;
+	box-shadow: 0 0 5px #222;
+}
