@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicação JS - Calculadora de IMC</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main id="hero">
+        <h1>Calculadora de IMC</h1>
+        <form action="" method="post" id="form">
+            <div class="form-group">
+                <lable>Nome:</lable>
+                <input type="text" name="name" id="name" class="input" autofocus required>
+            </div>
+            <div class="form-group">
+                <lable>Idade:</lable>
+                <input type="number" min="0" max="130" name="age" id="age" class="input" required>
+            </div>
+            <div class="form-group">
+                <lable>Peso:</lable>
+                <input type="number" step=".01" min=".0" max="500.0" name="weight" id="weight" class="input" required>
+            </div>
+            <div class="form-group">
+                <lable>Altura:</lable>
+                <input type="number" step=".01" min=".0" max="2.70" name="height" id="height" class="input" required>
+            </div>
+
+            <div class="form-group btGroup">
+                <button type="submit" class="btn" id="btnSend">Enviar</button>
+                <button type="reset" class="btn" id="clean">Limpar</button>
+            </div>
+            <div class="form-group">
+                <lable>IMC</lable>
+                <input type="number" name="imc" id="resultImc" class="input" value="0.0" disabled>
+                <span id="warner"></span>
+            </div>
+        </form>
+        <div id="result">
+            <h2 id="resId">IMC</h2>
+            <p id="resName" class="person"></p>
+            <p id="resAge" class="person"></p>
+            <p id="resWeight" class="person"></p>
+            <p id="resHeight" class="person"></p>
+            <p id="resImc" class="person"></p>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>

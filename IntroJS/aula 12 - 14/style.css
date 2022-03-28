@@ -1,0 +1,97 @@
+/* root */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap");
+
+* {
+	margin: 0;
+	padding: 0;
+	font-family: "Roboto", sans-serif;
+}
+body {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 95vw;
+	background-color: #ececec;
+}
+main {
+	max-width: 2000px;
+	height: 100%;
+	margin: 1rem 0;
+	padding: 1rem;
+	border-radius: 8px;
+	background-color: rgba(7, 3, 41, 0.3);
+}
+/* form */
+form {
+	display: flex;
+	flex-direction: column;
+	margin: 1rem;
+}
+/* input */
+.form-group {
+	margin: 0.6rem;
+}
+.input {
+	width: 96%;
+}
+input[type="number"],
+input[type="text"] {
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	padding: 0.6rem;
+}
+/* botao */
+.btGroup {
+	display: flex;
+	justify-content: space-between;
+}
+.btn {
+	border: 1px solid #ccc;
+	border-radius: 50px;
+	width: 90px;
+	padding: 0.6rem;
+	cursor: pointer;
+	background-color: #ececec;
+}
+#btnSend {
+	background-color: #1a237e;
+	color: #ececec;
+}
+#clean {
+	background-color: #ff3d00;
+	color: #ececec;
+}
+/* result */
+.resultDisplay {
+	visibility: hidden;
+}
+#result {
+	height: 200px;
+	margin: 1rem;
+	padding: 0.6rem;
+	border-radius: 5px;
+	border: 1px solid #ccc;
+	background-color: #ececec;
+	box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+}
+lable {
+	font-weight: bold;
+	margin-right: 0.6rem;
+}
+#resultImc {
+	border: 1px solid #ccc;
+	width: 60px;
+}
+.person {
+	padding: 0.6rem;
+}
+.person:nth-child(odd) {
+	background-color: #ccc;
+}
+.person:nth-child(even) {
+	background-color: #ccc;
+}
+/* warner */
+#warner {
+	font-weight: bold;
+}
