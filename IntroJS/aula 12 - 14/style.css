@@ -10,7 +10,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	width: 95vw;
+	width: 100vw;
 	background-color: #ececec;
 }
 main {
@@ -66,7 +66,7 @@ input[type="text"] {
 	visibility: hidden;
 }
 #result {
-	height: 200px;
+	height: 100%;
 	margin: 1rem;
 	padding: 0.6rem;
 	border-radius: 5px;
@@ -89,7 +89,7 @@ lable {
 	background-color: #ccc;
 }
 .person:nth-child(even) {
-	background-color: #ccc;
+	background-color: #e2e2e2;
 }
 /* warner */
 #warner {
