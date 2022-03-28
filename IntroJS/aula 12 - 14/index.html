@@ -15,23 +15,25 @@
         <form action="" method="post" id="form">
             <div class="form-group">
                 <lable>Nome:</lable>
-                <input type="text" name="name" id="name" class="input" autofocus required>
+                <input type="text" name="nome" id="name" class="input data" autofocus required>
             </div>
             <div class="form-group">
                 <lable>Idade:</lable>
-                <input type="number" min="0" max="130" name="age" id="age" class="input" required>
+                <input type="number" min="0" max="130" name="idade" id="age" class="input data" required>
             </div>
             <div class="form-group">
                 <lable>Peso:</lable>
-                <input type="number" step=".01" min=".0" max="500.0" name="weight" id="weight" class="input" required>
+                <input type="number" step=".01" min=".0" max="500.0" name="peso" id="weight" class="input data"
+                    required>
             </div>
             <div class="form-group">
                 <lable>Altura:</lable>
-                <input type="number" step=".01" min=".0" max="2.70" name="height" id="height" class="input" required>
+                <input type="number" step=".01" min=".0" max="2.70" name="altura" id="height" class="input data"
+                    required>
             </div>
 
             <div class="form-group btGroup">
-                <button type="submit" class="btn" id="btnSend">Enviar</button>
+                <button type="submit" class="btn" id="send">Enviar</button>
                 <button type="reset" class="btn" id="clean">Limpar</button>
             </div>
             <div class="form-group">
@@ -41,12 +43,11 @@
             </div>
         </form>
         <div id="result">
-            <h2 id="resId" class="person">IMC</h2>
+            <h2 id="resId" class="person">Resumo:</h2>
             <p id="resName" class="person"></p>
             <p id="resAge" class="person"></p>
             <p id="resWeight" class="person"></p>
             <p id="resHeight" class="person"></p>
-            <p id="resImc" class="person"></p>
         </div>
     </main>
     <script src="script.js"></script>

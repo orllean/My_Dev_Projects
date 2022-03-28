@@ -10,11 +10,11 @@ body {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	width: 100vw;
+	width: 90vw;
 	background-color: #ececec;
 }
 main {
-	max-width: 2000px;
+	width: 300px;
 	height: 100%;
 	margin: 1rem 0;
 	padding: 1rem;
@@ -53,7 +53,7 @@ input[type="text"] {
 	cursor: pointer;
 	background-color: #ececec;
 }
-#btnSend {
+#send {
 	background-color: #1a237e;
 	color: #ececec;
 }
@@ -62,9 +62,6 @@ input[type="text"] {
 	color: #ececec;
 }
 /* result */
-.resultDisplay {
-	visibility: hidden;
-}
 #result {
 	height: 100%;
 	margin: 1rem;
@@ -82,6 +79,14 @@ lable {
 	border: 1px solid #ccc;
 	width: 60px;
 }
+/* styled by js */
+.alert {
+	padding: 0.6rem;
+	border-radius: 5px;
+	color: #ff3d00;
+	background-color: #e2e2e2;
+}
+
 .person {
 	padding: 0.6rem;
 }
@@ -93,5 +98,7 @@ lable {
 }
 /* warner */
 #warner {
+	padding: 0.6rem;
 	font-weight: bold;
+	width: 115px;
 }
