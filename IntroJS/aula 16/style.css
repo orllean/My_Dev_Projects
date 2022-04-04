@@ -20,7 +20,6 @@ body {
 		#c850c0 46%,
 		#ffcc70 100%
 	);
-	/* background-size: cover; */
 	background-repeat: no-repeat;
 	color: #ececec;
 	font-size: 1rem;
@@ -37,9 +36,9 @@ main {
 	border-radius: 8px;
 	background-color: rgba(0, 0, 0, 0.3);
 	padding: 2em;
-	/* overflow-y: auto;
+	overflow-y: auto;
 	overflow-x: hidden;
-	position: relative; */
+	position: relative;
 }
 
 #imgDado {
