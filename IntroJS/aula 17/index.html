@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Mentalist</title>
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main id="hero">
+        <div id="titulo">
+            <h1>Adivinhe o número secreto</h1>
+        </div>
+        <p class="centro" id="dica">Chute um número entre 1 e 10</p>
+        <section class="conteudo">
+            <input type="number" step="1" min="1" max="10" name="inputNum" id="inputNum" class="animar chute">
+            <button id="btnChutar">Chutar</button>
+            <button id="btnSom" class="btn">&#x1F508</button>
+        </section>
+        <p class="centro" id="aviso">aviso de teste</p>
+    </main>
+    <audio preload="auto" autoplay loop src="audio/abertura-the-mentalist.mp3" id="sound"></audio>
+    <script src="script.js"></script>
+</body>
+
+</html>
