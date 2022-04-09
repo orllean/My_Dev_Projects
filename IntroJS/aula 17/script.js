@@ -1,13 +1,12 @@
-/* &#x1F508 com som  &#x1F507 sem som */
-/* &#x1F494 loose &#x2764 life*/
 let tentativa = 0;
-let txt = "";
+const content = document.querySelector("#content");
 const placar = document.querySelector("#placar");
 const input = document.querySelector("#inputNum");
 const btnChutar = document.querySelector("#btnChutar");
 const btnSom = document.querySelector("#btnSom");
-const avisoContent = document.querySelector("#avisoContent");
 const aviso = document.querySelector("#aviso");
+const avisoContent = document.querySelector("#avisoContent");
+const sound = document.querySelector("#sound");
 
 function random(min, max) {
 	return (numSecreto = Math.floor(Math.random() * (max - min + 1)) + min);
@@ -24,22 +23,91 @@ function validaChute(num) {
 	return true;
 }
 
-function alerta() {
-	console.log("erro");
+function alerta(e, txt) {
+	content.style.visibility = "hidden";
+	aviso.innerHTML = txt;
+	avisoContent.classList.add(e);
+	avisoContent.style.visibility = "visible";
+	setTimeout(() => {
+		avisoContent.style.visibility = "hidden";
+		avisoContent.classList.remove(e);
+		aviso.innerHTML = "";
+		content.style.visibility = "visible";
+		input.value = "";
+		input.focus();
+	}, 2500);
 }
 
-function playGame(x, y) {
-	console.log(x, y);
+function playSound() {
+	sound.volume = 0.3;
+	sound.currentTime = 0;
+	sound.play();
+}
+
+function gameOver(winner) {
+	switch (winner) {
+		case true:
+			alerta("acertou", "Você ACERTOU o número secreto, Parabéns!");
+			break;
+		default:
+			alerta("errou", `Fim de Jogo!<br>O número secreto era: ${numSecreto}.`);
+			break;
+	}
+	setTimeout(() => {
+		location.reload();
+	}, 2500);
+}
+
+function scoreBoard(gameOver) {
+	if (tentativa === 1 && gameOver) {
+		placar.textContent = `Tentativa: ${tentativa} de 3 ❤ ❤ ❤`;
+	} else if ((tentativa === 1 && !gameOver) || (tentativa === 2 && gameOver)) {
+		placar.textContent = `Tentativa: ${tentativa} de 3 💔 ❤ ❤`;
+	} else if ((tentativa === 2 && !gameOver) || (tentativa === 3 && gameOver)) {
+		placar.textContent = `Tentativa: ${tentativa} de 3 💔 💔 ❤`;
+	} else if (tentativa === 3 && !gameOver) {
+		placar.textContent = `Tentativa: ${tentativa} de 3 💔 💔 💔`;
+	}
+}
+
+function round(x, y) {
+	if (x === y) {
+		scoreBoard(true);
+		gameOver(true);
+	} else if (tentativa < 3) {
+		if (x < y) {
+			scoreBoard();
+			alerta("maior", "Seu chute foi MAIOR que o número secreto");
+		} else if (x > y) {
+			scoreBoard();
+			alerta("menor", "Seu chute foi MENOR que o número secreto");
+		}
+	} else {
+		scoreBoard();
+		gameOver(false);
+	}
 }
 
 btnChutar.addEventListener("click", () => {
 	if (!validaChute(chute)) {
-		alerta();
+		alerta(
+			"errou",
+			`Você não está sendo um(a) mentalista!<br>Digite um número inteiro entre 1 e 10.`
+		);
 	} else {
-		playGame(numSecreto, chute);
+		tentativa++;
+		playSound();
+		round(numSecreto, chute);
 	}
 });
 
 btnSom.addEventListener("click", () => {
-	console.log(2);
+	if (sound.muted) {
+		sound.muted = false;
+		btnSom.textContent = "🔈";
+	} else {
+		sound.muted = true;
+		btnSom.textContent = "🔇";
+	}
+	input.focus();
 });

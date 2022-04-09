@@ -16,17 +16,19 @@
             <h1>Adivinhe o número secreto!</h1>
         </div>
         <div id="subTitulo">
-            <p>Chute um número entre 1 e 10.</p>
-            <p id="placar">Tentativa: 0 de 3 &#x2764 &#x2764 &#x2764</p>
+            <h3>Chute um número entre 1 e 10.</h3>
+            <p id="placar">Tentativa: 0 de 3 ❤ ❤ ❤</p>
         </div>
-        <section id="content" class="conteudo">
+        <section id="content">
             <input type="number" step="1" min="1" max="10" name="inputNum" id="inputNum" autofocus
                 onblur="getInput(Number(this.value))">
-            <button id="btnChutar">Chutar</button>
-            <button id="btnSom" class="btn">&#x1F508</button>
+            <div">
+                <button id="btnChutar">Chutar</button>
+                <button id="btnSom">&#x1F508</button>
+                </div>
         </section>
-        <section id="avisoContent" class="aparecer">
-            <span id="aviso">aviso de teste</span>
+        <section id="avisoContent">
+            <span id="aviso"></span>
         </section>
     </main>
     <audio preload="auto" src="audio/abertura-the-mentalist.mp3" id="sound"></audio>
