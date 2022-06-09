@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,200;1,500&display=swap");
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+a {
+	text-decoration: none;
+}
+
+html {
+	font-size: 12px;
+	font-family: "Poppins", Arial, Helvetica, sans-serif;
+	scroll-behavior: smooth;
+}
+
+.container {
+	min-height: 100vh;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+/* Seção de apresentação */
+
+#presentation {
+	background-image: url(./background.jpeg);
+	background-size: cover;
+	background-position: center;
+	line-height: 6rem;
+	position: relative;
+	z-index: 1;
+}
+
+#presentation::after {
+	content: "";
+	height: 100%;
+	width: 100%;
+	background-color: black;
+	position: absolute;
+	top: 0;
+	opacity: 0.5;
+	z-index: -1;
+}
+
+#presentation h1 {
+	width: fit-content;
+	font-size: 5rem;
+	position: relative;
+	color: transparent;
+	animation: revealText 0.5s ease forwards;
+	animation-delay: 1.5s;
+}
+
+#presentation h1:nth-child(1) {
+	text-transform: capitalize;
+	animation-delay: 0.8s;
+}
+#presentation h1:nth-child(2) {
+	animation-delay: 1.8s;
+}
+#presentation h1:nth-child(3) {
+	margin-bottom: 50px;
+	text-transform: capitalize;
+	animation: revealName 0s ease forwards;
+	animation-delay: 3s;
+}
+
+#presentation h1 span {
+	background-color: gold;
+	width: 0%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	animation: revealBox 1s ease;
+	animation-delay: 0.5s;
+}
+
+#presentation h1:nth-child(1) span {
+	animation-delay: 0.5s;
+}
+
+#presentation h1:nth-child(2) span {
+	animation-delay: 1.5s;
+}
+
+#presentation h1:nth-child(3) span {
+	animation-delay: 2.5s;
+}
+
+#presentation .cta {
+	color: gold;
+	padding: 10px 30px;
+	border: 2px solid gold;
+	font-size: 2rem;
+	text-transform: uppercase;
+	letter-spacing: 0.3rem;
+	transition: 0.5s ease;
+	transition-property: background-color, color;
+}
+
+#presentation .cta:hover {
+	color: indigo;
+	background-color: gold;
+}
+
+/* Keyframes */
+
+@keyframes revealText {
+	100% {
+		color: white;
+	}
+}
+
+@keyframes revealName {
+	100% {
+		color: gold;
+	}
+}
+
+@keyframes revealBox {
+	50% {
+		width: 100%;
+		left: 0;
+	}
+	100% {
+		width: 0;
+		left: 100%;
+	}
+}
