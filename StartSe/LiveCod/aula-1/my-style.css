@@ -122,7 +122,7 @@ html {
 /* Seção de Portifólio */
 
 header h1 {
-	padding: 30px;
+	padding: 30px 0 50px;
 	font-size: 3rem;
 	font-weight: 200;
 	text-align: center;
@@ -140,7 +140,7 @@ header h1 {
 	display: flex;
 	flex-direction: column;
 	width: 80%;
-	margin: 20px auto;
+	margin-bottom: 40px;
 	border-radius: 10px;
 	overflow: hidden;
 }
