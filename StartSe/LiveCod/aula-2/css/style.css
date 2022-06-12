@@ -1,0 +1,165 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;1,400&display=swap");
+
+:root {
+	--primary-color: #0080ed;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	outline: 0;
+	box-sizing: border-box;
+}
+
+body {
+	height: 100%;
+	font-family: "Sourse Sans Pro", sans-serif;
+	text-rendering: optimizeLegibility;
+}
+
+/* header */
+
+header {
+	background-color: var(--primary-color);
+}
+
+header .container {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	height: 80px;
+	max-width: 980px;
+	margin: auto;
+}
+
+header .container img {
+	height: 30px;
+}
+
+header nav ul {
+	display: flex;
+}
+
+header nav ul li {
+	list-style: none;
+}
+
+header nav ul li a {
+	color: white;
+	font-size: 1rem;
+	padding: 32px;
+	text-decoration: none;
+	text-transform: uppercase;
+	transition: all 250ms linear 0s;
+}
+
+header nav ul li a:hover {
+	background: rgba(255, 255, 255, 0.15);
+}
+
+/* main */
+
+main {
+	margin-bottom: 100px;
+}
+
+main .container-main {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	max-width: 980px;
+	margin: 100px auto 0;
+}
+
+main .container-main img {
+	width: 600px;
+}
+
+h2 {
+	font-size: 2.75rem;
+	font-weight: bold;
+	line-height: 3rem;
+}
+
+h3 {
+	color: rgb(130, 130, 130);
+	font-size: 1.2rem;
+	line-height: 1.5rem;
+	margin-top: 10px;
+}
+
+form {
+	margin-top: 20px;
+}
+
+form input {
+	height: 45px;
+	width: 370px;
+	margin-bottom: 15px;
+	padding-left: 15px;
+	border-radius: 20px;
+	border: 2px solid var(--primary-color);
+	font-size: 1.1rem;
+}
+
+form [type="submit"] {
+	color: white;
+	background-color: var(--primary-color);
+}
+
+form [type="submit"]:hover {
+	cursor: pointer;
+}
+
+/* cards */
+
+.cards {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	grid-gap: 20px;
+	width: 90%;
+	max-width: 980px;
+	margin: 0 auto 100px;
+}
+
+.card {
+	display: flex;
+	flex-direction: column;
+	cursor: pointer;
+	transition: all 0.3s ease;
+}
+
+.card:hover {
+	transform: translateY(-5px);
+	box-shadow: 5px 5px 15px -4px black;
+}
+
+.image {
+	width: 100%;
+	padding-top: 55%;
+	position: relative;
+	overflow: hidden;
+}
+
+.image img {
+	position: absolute;
+	border-radius: 100px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.content {
+	padding: 20px;
+	background-color: rgb(230, 230, 230);
+}
+
+.title {
+	margin-bottom: 15px;
+}
+
+.text-medium {
+	font-size: 1rem;
+	line-height: 1.5rem;
+	color: rgb(130, 130, 130);
+}

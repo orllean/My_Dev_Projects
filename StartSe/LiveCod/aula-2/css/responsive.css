@@ -1,0 +1,9 @@
+@media (max-width: 1000px){
+    main .container-main img{
+        display: none;
+    }
+
+    h2, h3{
+        margin-left: 50px;
+    }
+}
