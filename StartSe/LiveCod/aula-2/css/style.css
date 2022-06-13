@@ -1,7 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;1,400&display=swap");
 
 :root {
-	--primary-color: #0080ed;
+	--primary-color: rgb(0, 128, 237);
+	--secondary-color: rgba(0, 126, 237, 0.1);
 }
 
 * {
@@ -33,6 +34,10 @@ header .container {
 
 header .container img {
 	height: 30px;
+}
+
+input[type="checkbox"] {
+	display: none;
 }
 
 header nav ul {
@@ -108,6 +113,8 @@ form [type="submit"] {
 
 form [type="submit"]:hover {
 	cursor: pointer;
+	color: rgb(130, 130, 130);
+	background-color: var(--secondary-color);
 }
 
 /* cards */
@@ -126,6 +133,7 @@ form [type="submit"]:hover {
 	flex-direction: column;
 	cursor: pointer;
 	transition: all 0.3s ease;
+	border-radius: 5px;
 }
 
 .card:hover {
@@ -138,11 +146,11 @@ form [type="submit"]:hover {
 	padding-top: 55%;
 	position: relative;
 	overflow: hidden;
+	border-radius: 5px 5px 0 0;
 }
 
 .image img {
 	position: absolute;
-	border-radius: 100px;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
@@ -150,7 +158,8 @@ form [type="submit"]:hover {
 
 .content {
 	padding: 20px;
-	background-color: rgb(230, 230, 230);
+	border-radius: 10px;
+	background-color: var(--secondary-color);
 }
 
 .title {
