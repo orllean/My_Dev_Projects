@@ -12,7 +12,6 @@
 }
 
 body {
-	height: 100%;
 	font-family: "Sourse Sans Pro", sans-serif;
 	text-rendering: optimizeLegibility;
 }
@@ -76,7 +75,7 @@ main .container-main img {
 }
 
 h2 {
-	font-size: 2.75rem;
+	font-size: 2.7rem;
 	font-weight: bold;
 	line-height: 3rem;
 }
