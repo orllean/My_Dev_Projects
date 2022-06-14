@@ -70,3 +70,29 @@ header .list-items a {
 	background-color: var(--primary-color);
 	border-radius: 30px;
 }
+
+#quem-somos {
+	flex-direction: row-reverse;
+	align-items: center;
+}
+
+#quem-somos h2 {
+	display: flex;
+	align-items: center;
+	margin-bottom: 20px;
+	font-size: 32px;
+	color: var(--primary-color);
+}
+
+#quem-somos h2::before {
+	content: "";
+	height: 50px;
+	width: 5px;
+	margin-right: 5px;
+	background-color: var(--primary-color);
+}
+
+#quem-somos p {
+	margin-bottom: 10px;
+	width: 90%;
+}
