@@ -66,7 +66,8 @@ header .list-items a {
 	color: var(--primary-color);
 }
 
-.presentation-text a {
+.presentation-text a,
+.btn {
 	display: block;
 	margin-top: 10px;
 	padding: 15px;
@@ -149,4 +150,61 @@ header .list-items a {
 	color: var(--primary-color);
 	background-color: white;
 	border-radius: 30px;
+}
+
+#planos {
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+#planos h2 {
+	margin-top: 100px;
+	font-size: 32px;
+}
+
+.list-plans {
+	display: flex;
+	align-items: flex-end;
+	justify-content: space-around;
+}
+
+.item-plan {
+	min-width: 180px;
+	padding: 20px;
+	border: 5px solid var(--primary-color);
+}
+
+.item-plan h3 {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	font-size: 24px;
+}
+
+.item-plan h3::after {
+	content: "";
+	height: 3px;
+	width: 100%;
+	margin: 10px 0;
+	background-color: var(--primary-color);
+}
+
+.item-plan ul {
+	/* display: flex; */
+	flex-direction: column;
+	padding: 10px;
+}
+
+.item-plan ul li {
+	display: flex;
+	align-items: center;
+	padding: 5px 0;
+}
+
+.item-plan ul li::before {
+	content: "";
+	height: 8px;
+	width: 8px;
+	margin-right: 5px;
+	background-color: var(--primary-color);
 }
