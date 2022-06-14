@@ -18,7 +18,7 @@ a {
 	text-decoration: none;
 }
 
-div img{
+div img {
 	display: block;
 	width: 100%;
 }
@@ -102,6 +102,51 @@ header .list-items a {
 	width: 90%;
 }
 
-#quem-somos img{
+#quem-somos img {
 	min-width: 500px;
+}
+
+.container-externo {
+	width: 100%;
+	background-color: var(--primary-color);
+}
+
+#servicos {
+	padding: 100px 0;
+	flex-direction: column;
+	color: white;
+}
+
+#servicos h2 {
+	font-size: 32px;
+	margin-bottom: 50px;
+}
+
+.list-service {
+	display: flex;
+	justify-content: space-around;
+}
+
+.list-service .item-service {
+	text-align: center;
+}
+
+.item-service img {
+	width: 90%;
+	margin: auto;
+}
+
+.item-service p {
+	margin: 25px 0;
+	font-size: 16px;
+	font-weight: 600;
+}
+
+.item-service a {
+	display: block;
+	padding: 15px;
+	font-weight: 700;
+	color: var(--primary-color);
+	background-color: white;
+	border-radius: 30px;
 }
