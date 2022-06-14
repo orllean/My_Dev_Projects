@@ -18,6 +18,11 @@ a {
 	text-decoration: none;
 }
 
+div img{
+	display: block;
+	width: 100%;
+}
+
 .flex-container {
 	display: flex;
 	width: 100%;
@@ -95,4 +100,8 @@ header .list-items a {
 #quem-somos p {
 	margin-bottom: 10px;
 	width: 90%;
+}
+
+#quem-somos img{
+	min-width: 500px;
 }
