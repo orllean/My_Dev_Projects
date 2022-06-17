@@ -1,0 +1,160 @@
+:root {
+	--primary-color: #122a57;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	font-family: "Open Sans", sans-serif;
+	color: var(--primary-color);
+}
+
+ul {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+	color: white;
+}
+
+img {
+	max-width: 100%;
+}
+
+.hero {
+	background-color: var(--primary-color);
+	color: white;
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	max-width: 890px;
+	margin: 0 auto;
+	padding: 0 20px;
+}
+
+header h1 {
+	margin: 20px 0 5px;
+	text-align: center;
+	color: white;
+}
+
+nav ul {
+	display: flex;
+	justify-content: space-between;
+	margin: 5px 0;
+}
+
+.hero-section {
+	min-height: 60vh;
+	justify-content: space-around;
+}
+
+.hero-section h1 {
+	font-size: 3.5rem;
+	font-weight: 900;
+	line-height: 50px;
+	color: var(--primary-color);
+}
+
+.hero-section p {
+	letter-spacing: 0.18rem;
+	margin: 15px 0 15px;
+}
+
+.hero-section a {
+	display: block;
+	margin: 15px 0 15px;
+	padding: 10px 0;
+	text-align: center;
+	border-radius: 30px;
+	background-color: var(--primary-color);
+}
+
+.us-section {
+	flex-direction: column-reverse;
+	min-height: 70vh;
+	justify-content: space-around;
+}
+
+.us-section img {
+	width: 180vw;
+	/* margin-right: 150px; */
+}
+
+.us-section h2 {
+	font-size: 42px;
+	padding-bottom: 30px;
+}
+
+.us-section p {
+	font-size: 22px;
+	padding-bottom: 15px;
+	line-height: 35px;
+}
+
+.container-servico {
+	min-height: 50vh;
+	align-items: center;
+}
+
+h2.servicos {
+	font-size: 42px;
+	padding: 30px;
+	color: white;
+}
+
+.item-servico {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.item-servico p {
+	padding: 18px 0 25px;
+	font-size: 14px;
+	color: white;
+}
+
+.item-servico a {
+	width: 100%;
+	margin-bottom: 50px;
+	padding: 10px;
+	text-align: center;
+	font-weight: 900;
+	color: var(--primary-color);
+	border-radius: 30px;
+	background-color: white;
+}
+
+@media (min-width: 660px) {
+	.container {
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	header {
+		height: 100px;
+	}
+
+	header h1 {
+		margin: 0;
+	}
+
+	header nav a {
+		padding-left: 20px;
+	}
+
+	.hero-section,
+	.us-section {
+		justify-content: space-between;
+	}
+
+	.us-section p {
+		line-height: 25px;
+	}
+}

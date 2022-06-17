@@ -28,6 +28,7 @@ div img {
 	width: 100%;
 	max-width: 992px;
 	margin: auto;
+	/* padding: 0 10px; */
 }
 
 header {
@@ -169,7 +170,7 @@ header .list-items a {
 }
 
 .item-plan {
-	min-width: 180px;
+	max-width: 180px;
 	padding: 20px;
 	border: 5px solid var(--primary-color);
 }
@@ -207,4 +208,22 @@ header .list-items a {
 	width: 8px;
 	margin-right: 5px;
 	background-color: var(--primary-color);
+}
+
+footer {
+	display: flex;
+	align-items: center;
+	height: 100px;
+	color: white;
+	background-color: var(--primary-color);
+}
+
+.footer {
+	justify-content: space-between;
+}
+
+@media(max-width: 992px){
+	.flex-container{
+		/* flex-direction: column; */
+	}
 }
