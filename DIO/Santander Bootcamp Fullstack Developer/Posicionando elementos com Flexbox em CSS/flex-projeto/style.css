@@ -222,8 +222,8 @@ footer {
 	justify-content: space-between;
 }
 
-@media(max-width: 992px){
-	.flex-container{
+@media (max-width: 992px) {
+	.flex-container {
 		/* flex-direction: column; */
 	}
 }

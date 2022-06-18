@@ -22,6 +22,16 @@ img {
 	max-width: 100%;
 }
 
+h2.h2-title {
+	font-size: 42px;
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+
+h2#servicos.h2-title {
+	color: white;
+}
+
 .hero {
 	background-color: var(--primary-color);
 	color: white;
@@ -65,9 +75,9 @@ nav ul {
 	margin: 15px 0 15px;
 }
 
-.hero-section a {
+a.a-btn {
 	display: block;
-	margin: 15px 0 15px;
+	margin: 15px 0 0;
 	padding: 10px 0;
 	text-align: center;
 	border-radius: 30px;
@@ -82,12 +92,6 @@ nav ul {
 
 .us-section img {
 	width: 180vw;
-	/* margin-right: 150px; */
-}
-
-.us-section h2 {
-	font-size: 42px;
-	padding-bottom: 30px;
 }
 
 .us-section p {
@@ -99,12 +103,6 @@ nav ul {
 .container-servico {
 	min-height: 50vh;
 	align-items: center;
-}
-
-h2.servicos {
-	font-size: 42px;
-	padding: 30px;
-	color: white;
 }
 
 .item-servico {
@@ -119,15 +117,71 @@ h2.servicos {
 	color: white;
 }
 
-.item-servico a {
+.container-servico a.a-btn {
 	width: 100%;
-	margin-bottom: 50px;
-	padding: 10px;
-	text-align: center;
-	font-weight: 900;
+	margin-bottom: 60px;
 	color: var(--primary-color);
-	border-radius: 30px;
 	background-color: white;
+}
+
+.item-plan {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 60px;
+	padding: 20px;
+	border: 5px solid var(--primary-color);
+}
+
+.item-plan h3 {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	font-size: 24px;
+}
+
+.item-plan h3::after {
+	content: "";
+	height: 3px;
+	width: 100%;
+	margin: 10px 0;
+	background-color: var(--primary-color);
+}
+
+.item-plan ul {
+	padding: 10px;
+}
+
+.item-plan ul li {
+	display: flex;
+	align-items: center;
+	padding: 5px 0;
+}
+
+.item-plan ul li::before {
+	content: "";
+	height: 8px;
+	width: 8px;
+	margin-right: 5px;
+	background-color: var(--primary-color);
+}
+
+/* footer {
+	display: flex;
+	align-items: center;
+	background-color: var(--primary-color);
+} */
+
+footer {
+	height: 100px;
+}
+
+footer.container {
+	justify-content: space-between;
+}
+
+footer p {
+	padding: 20px 0 10px;
+	color: white;
 }
 
 @media (min-width: 660px) {
@@ -156,5 +210,30 @@ h2.servicos {
 
 	.us-section p {
 		line-height: 25px;
+	}
+
+	.item-plan {
+		margin-bottom: 0;
+	}
+
+	.plan-section {
+		margin-bottom: 30px;
+		align-items: flex-end;
+	}
+
+	#quem-somos h2 {
+		display: flex;
+		align-items: center;
+		margin-bottom: 20px;
+		font-size: 32px;
+		color: var(--primary-color);
+	}
+
+	#quem-somos h2::before {
+		content: "";
+		height: 50px;
+		width: 5px;
+		margin-right: 5px;
+		background-color: var(--primary-color);
 	}
 }
