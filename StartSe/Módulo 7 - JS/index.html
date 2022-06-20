@@ -1,15 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>StartSe - Módulo VII: manipulando DOM com JS</title>
+    <style>
+        body {
+            margin-left: 25px;
+            color: white;
+            background-color: rgb(5, 5, 35);
+            font: 14pt Tahoma, sans-serif;
+        }
+
+        ul {
+            padding-left: 25px;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+
+        button.btn-erase {
+            position: absolute;
+            left: 250px;
+        }
+    </style>
 </head>
 
 <body>
-
+    <header>
+        <h1>Lista de tarefas</h1>
+    </header>
+    <main>
+        <input type="text" name="" id="txtInput" placeholder="Tarefa">
+        <button class="add" id="btnAdd">✚</button>
+    </main>
+    <section>
+        <ul id="listToDo"> </ul>
+    </section>
+    <script src="script.js"></script>
 </body>
 
 </html>
