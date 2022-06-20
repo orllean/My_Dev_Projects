@@ -20,11 +20,23 @@
 
         ul li {
             margin-bottom: 10px;
+            text-indent: 10px;
+            list-style-type: '☐';
+            cursor: pointer;
+        }
+
+        ul li.do {
+            list-style-type: '☑';
+            cursor: pointer;
+            text-indent: 10px;
+            text-decoration: line-through;
+            color: lightskyblue;
         }
 
         button.btn-erase {
             position: absolute;
-            left: 250px;
+            left: 260px;
+            background-color: lightcyan;
         }
     </style>
 </head>
@@ -36,9 +48,15 @@
     <main>
         <input type="text" name="" id="txtInput" placeholder="Tarefa">
         <button class="add" id="btnAdd">✚</button>
+        <select name="" id="selectOption" hidden>
+            <option value="">-- Selecione uma opção --</option>
+            <option value="">Marcar todas as tarefas</option>
+            <option value="">Desmmarcar todas as tarefas</option>
+            <option value="">Limpar todas as tarefas</option>
+        </select>
     </main>
     <section>
-        <ul id="listToDo"> </ul>
+        <ul id="listToDo"></ul>
     </section>
     <script src="script.js"></script>
 </body>
