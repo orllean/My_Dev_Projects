@@ -39,13 +39,13 @@ main {
 }
 
 .main-container {
+	min-height: 70%;
 	display: grid;
 	gap: 10px;
 	grid-template: 1fr 1fr / 1fr 1fr;
 }
 
 article {
-	min-height: 160px;
 	background-color: chocolate;
 }
 
