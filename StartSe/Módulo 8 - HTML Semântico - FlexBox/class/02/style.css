@@ -1,0 +1,22 @@
+*,
+::before,
+::after {
+	box-sizing: border-box;
+}
+
+.container {
+	display: grid;
+	height: 100vh;
+}
+
+nav {
+	background-color: #ffdbef;
+}
+
+main {
+	background-color: #caf0da;
+}
+
+aside {
+	background-color: #bdb2de;
+}
