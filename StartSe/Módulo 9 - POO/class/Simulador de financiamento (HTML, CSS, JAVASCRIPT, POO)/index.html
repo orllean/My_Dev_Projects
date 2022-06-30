@@ -20,7 +20,7 @@
 
         body {
             height: 90vh;
-            max-width: 360px;
+            max-width: 600px;
             margin: 0 auto;
             padding: 20px;
             font-size: 1.1rem;
@@ -43,12 +43,16 @@
             border: 1px solid;
         }
 
+        button:hover {
+            cursor: pointer;
+        }
+
         .sectionPeriod {
             display: flex;
         }
 
         .chekbox {
-            margin-right: auto;
+            margin-right: 30px;
         }
     </style>
 
@@ -62,14 +66,16 @@
     <input type="text" placeholder="Prazo (em meses)" id="txtMonths">
     <button id="btnCalcf">Calcular</button>
     <div class="sectionPeriod">
-        <div class="chekbox"><input type="checkbox" id="chkPeriod"> Com carência?</div>
+        <div class="chekbox"><input type="checkbox" name="chkPeriod" id="chkPeriod"> <label for="chkPeriod">Com
+                carência?</label></div>
         <select id="listPeriod" hidden>
             <option value="2">2 meses</option>
             <option value="3">3 meses</option>
             <option value="4">4 meses</option>
         </select>
     </div>
-    <script src="main.js"></script>
+
+    <script type="module" src="main.js"></script>
 </body>
 
 </html>
