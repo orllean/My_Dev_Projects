@@ -1,13 +1,75 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simulador de financiamento</title>
+    <title>Simulador financeiro</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            background-color: azure;
+        }
+
+        body {
+            height: 90vh;
+            max-width: 360px;
+            margin: 0 auto;
+            padding: 20px;
+            font-size: 1.1rem;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: rgb(50, 50, 50);
+            background-color: aliceblue;
+            border: 2px solid hsla(208, 100%, 7%, 0.09);
+            border-top: none;
+            border-radius: 0 0 30px 30px;
+
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        input,
+        button {
+            padding: 5px 15px;
+            border-radius: 5px;
+            border: 1px solid;
+        }
+
+        .sectionPeriod {
+            display: flex;
+        }
+
+        .chekbox {
+            margin-right: auto;
+        }
+    </style>
+
 </head>
+
 <body>
-    <h2>Simulador de financiamento (HTML, CSS, JAVASCRIPT, POO)</h2>
+    <h2>Simulador de financiamento <br> com Sistem de Amortização Constante (SAC)</h2>
+    <input type="text" placeholder="Valor do bem" id="txtWell">
+    <input type="text" placeholder="Valor de entrada" id="txtInitialValue">
+    <input type="text" placeholder="Taxa de juros %" id="txtRate">
+    <input type="text" placeholder="Prazo (em meses)" id="txtMonths">
+    <button id="btnCalcf">Calcular</button>
+    <div class="sectionPeriod">
+        <div class="chekbox"><input type="checkbox" id="chkPeriod"> Com carência?</div>
+        <select id="listPeriod" hidden>
+            <option value="2">2 meses</option>
+            <option value="3">3 meses</option>
+            <option value="4">4 meses</option>
+        </select>
+    </div>
     <script src="main.js"></script>
 </body>
+
 </html>
