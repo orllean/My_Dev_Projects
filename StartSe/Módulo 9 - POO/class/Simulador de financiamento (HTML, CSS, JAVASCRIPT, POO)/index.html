@@ -19,7 +19,7 @@
         }
 
         body {
-            height: 90vh;
+            min-height: 90vh;
             max-width: 600px;
             margin: 0 auto;
             padding: 20px;
@@ -54,17 +54,30 @@
         .chekbox {
             margin-right: 30px;
         }
+
+        th,
+        td,
+        table {
+            border: 1px solid;
+            border-collapse: collapse;
+            padding: 5px 15px;
+            font-size: .9rem;
+        }
+
+        table {
+            width: 100%;
+        }
     </style>
 
 </head>
 
 <body>
     <h2>Simulador de financiamento <br> com Sistem de Amortização Constante (SAC)</h2>
-    <input type="text" placeholder="Valor do bem" id="txtWell">
-    <input type="text" placeholder="Valor de entrada" id="txtInitialValue">
-    <input type="text" placeholder="Taxa de juros %" id="txtRate">
-    <input type="text" placeholder="Prazo (em meses)" id="txtMonths">
-    <button id="btnCalcf">Calcular</button>
+    <input type="text" name="" placeholder="Valor do bem" id="txtWell">
+    <input type="text" name="" placeholder="Valor de entrada" id="txtInitialValue">
+    <input type="text" name="" placeholder="Taxa de juros %" id="txtRate">
+    <input type="text" name="" placeholder="Prazo (em meses)" id="txtMonths">
+    <button id="btnCalc">Calcular</button>
     <div class="sectionPeriod">
         <div class="chekbox"><input type="checkbox" name="chkPeriod" id="chkPeriod"> <label for="chkPeriod">Com
                 carência?</label></div>
@@ -74,7 +87,22 @@
             <option value="4">4 meses</option>
         </select>
     </div>
+    <div class="sectionTable">
+        <table>
+            <thead>
+                <tr>
+                    <th>No.</th>
+                    <th>Valor da Parcela</th>
+                    <th>Amortização</th>
+                    <th>Juros</th>
+                    <th>Saldo devedor</th>
+                </tr>
+            </thead>
+            <tbody id="corpoTabela">
 
+            </tbody>
+        </table>
+    </div>
     <script type="module" src="main.js"></script>
 </body>
 
