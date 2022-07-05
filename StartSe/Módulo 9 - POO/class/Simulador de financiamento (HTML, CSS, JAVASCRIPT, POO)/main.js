@@ -1,4 +1,5 @@
 import { financing } from "./financing.js";
+import { financingPeriod } from "./period.js";
 
 const txtValor = document.querySelector("#txtWell");
 const txtEntrada = document.querySelector("#txtInitialValue");
@@ -18,13 +19,25 @@ chkPeriod.addEventListener("change", function () {
 	}
 });
 
+function limpaCorpoTabela() {
+	while (corpoTabela.firstChild) {
+		corpoTabela.removeChild(corpoTabela.firstChild);
+	}
+}
+
 btnCalcular.addEventListener("click", function () {
+	limpaCorpoTabela();
 	const valor = parseFloat(txtValor.value);
 	const entrada = parseFloat(txtEntrada.value);
 	const taxaJuros = parseFloat(txtTaxaJuros.value);
 	const prazo = parseFloat(txtPrazo.value);
-
-	let simulacao = new financing(valor, entrada, taxaJuros, prazo);
+	let simulacao;
+	if (chkPeriod.checked) {
+		const carencia = parseInt(listPeriod.value);
+		simulacao = new financingPeriod(valor, entrada, taxaJuros, prazo, carencia);
+	} else {
+		simulacao = new financing(valor, entrada, taxaJuros, prazo);
+	}
 	simulacao.calcParcelasMensais();
 	simulacao.exibeParcelas();
 });

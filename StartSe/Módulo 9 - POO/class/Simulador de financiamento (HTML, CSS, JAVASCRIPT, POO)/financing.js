@@ -42,4 +42,8 @@ export class financing {
 			}
 		}
 	}
+
+	getParcelas() {
+		return this.#parcelas;
+	}
 }
