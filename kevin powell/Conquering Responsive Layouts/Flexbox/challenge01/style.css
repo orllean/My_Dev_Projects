@@ -1,0 +1,90 @@
+*,
+::before,
+::after {
+	box-sizing: border-box;
+}
+
+:root {
+	--main-color: #23424a;
+	--second-color: #38cfd9;
+}
+
+body {
+	margin: 0;
+	font-family: "Roboto", sans-serif;
+	font-size: 1.3rem;
+}
+
+p {
+	line-height: 1.4em;
+}
+
+.container {
+	width: 80%;
+	max-width: 1100px;
+	margin: 0 auto;
+}
+
+.hero {
+	padding: 5em 0;
+	background-color: var(--main-color);
+	color: white;
+}
+
+.hero__container {
+	width: 60%;
+}
+
+.hero h1 {
+	font-size: 3rem;
+	margin-top: 0;
+}
+
+.hero p {
+	opacity: 0.75;
+	margin-bottom: 3rem;
+}
+
+.btn {
+	display: inline-block;
+	text-decoration: none;
+	text-transform: uppercase;
+	letter-spacing: 0.2em;
+	font-weight: 900;
+	color: var(--main-color);
+	background-color: var(--second-color);
+	padding: 0.75em 2em;
+	border-radius: 100px;
+}
+
+.btn:hover,
+.btn:focus {
+	opacity: 0.75;
+}
+
+.row {
+	display: flex;
+	padding: 2.5em 0;
+	/* gap: 15px; */
+}
+/* com o seletor abaixo é possível acessar todos elementos apartir do segundo em diante. Usado aqui pare add um gap entre as colunas. */
+.col + .col {
+	margin-left: 2em;
+}
+
+.col {
+	width: 100%;
+}
+
+.section {
+	text-align: center;
+}
+
+.one h2 {
+	color: var(--main-color);
+}
+
+.two {
+	color: white;
+	background-color: var(--main-color);
+}
