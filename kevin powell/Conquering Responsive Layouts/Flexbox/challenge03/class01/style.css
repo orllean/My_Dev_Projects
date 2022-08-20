@@ -74,6 +74,8 @@ header {
 }
 
 .nav__list {
+    display: flex;
+    gap: 2em;
     margin: 0;
     padding: 0;
     list-style: none;
