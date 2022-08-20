@@ -74,16 +74,17 @@ header {
 	padding: 0.5em 0;
 }
 
+.nav {
+	align-items: center;
+}
+
 .nav__list {
 	display: flex;
 	gap: 2em;
+
 	margin: 0;
 	padding: 0;
 	list-style: none;
-}
-
-.nav__item--push-right {
-	margin-left: auto;
 }
 
 .nav__link {
