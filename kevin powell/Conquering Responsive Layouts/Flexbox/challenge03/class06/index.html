@@ -4,24 +4,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Conquering Responsive Layouts 4</title>
+    <title>Conquering Responsive Layouts 6</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-
     <header>
-        <nav class="container row nav">
-            <a class="row" href="#"><img src="img/logo.svg" alt="brand image"> </a>
-            <ul class="nav__list">
-                <li class="nav__item"><a href="#" class="nav__link">Home</a></li>
-                <li class="nav__item"><a href="#" class="nav__link">About</a></li>
-                <li class="nav__item"><a href="#" class="nav__link">Contact</a></li>
-                <li class="nav__item"><a href="#" class="nav__link">Sign In</a></li>
-                <li class="nav__item"><a href="#" class="nav__link nav__link--button">Sign up</a></li>
-            </ul>
-        </nav>
+        <div class="container row">
+            <a class="row nav__link" href="#"><img src="img/logo.svg" alt=""></a>
+            <nav class="nav">
+                <ul class="nav__list nav__list--primary">
+                    <li class="nav__item"><a href="#" class="nav__link">Home</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link">About</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link">Contact</a></li>
+                </ul>
+                <ul class="nav__list nav__list--secondary">
+                    <li class="nav__item"><a href="#" class="nav__link">Sign In</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link nav__link--button">Sign up</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <section class="hero">
@@ -46,7 +49,6 @@
                 dolore magna aliqua. Ut enim ad minim veniam. Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                 sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
         </section>
-
         <aside class="sidebar">
             <h2 class="sidebar-title">Cheap</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
@@ -61,6 +63,8 @@
                 dolore magna aliqua. Ut enim ad minim veniam.</p>
         </aside>
     </main>
+
+
 
 </body>
 
