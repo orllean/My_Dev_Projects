@@ -99,6 +99,6 @@ p {
 	background-color: var(--color-second);
 }
 
-.content:nth-last-of-type(even) .row {
+.content:nth-last-of-type(odd) .row {
 	flex-direction: row-reverse;
 }
