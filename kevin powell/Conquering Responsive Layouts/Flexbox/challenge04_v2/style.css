@@ -55,15 +55,15 @@ p {
 	width: 100%;
 }
 
-.hero .container {
-	max-width: 800px;
-}
-
 .hero {
 	min-height: 660px;
 	align-items: center;
 	text-align: center;
 	background-color: var(--color-main);
+}
+
+.hero .container {
+	max-width: 800px;
 }
 
 .hero p {
@@ -91,12 +91,12 @@ p {
 	color: var(--color-main);
 }
 
-.content:nth-of-type(odd) {
-	background-color: var(--color-third);
-}
-
 .content:nth-of-type(even) {
 	background-color: var(--color-second);
+}
+
+.content:nth-of-type(odd) {
+	background-color: var(--color-third);
 }
 
 .content:nth-last-of-type(odd) .row {
