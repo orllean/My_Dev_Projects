@@ -1,0 +1,66 @@
+*,
+::after,
+::before {
+	box-sizing: border-box;
+}
+
+:root {
+	--color-main: #f3eed9;
+	--color-second: #824936;
+	--color-third: #222c2a;
+
+	--font-featured: 300 1em "Roboto", sans-serif;
+	--font-h1: 900 3.33em "Playfair Display", serif;
+	--font-h2: 900 2em "Playfair Display", serif;
+	--font-p: 400 1.16em "Roboto", sans-serif;
+}
+
+body {
+	margin: 0;
+	font-size: 1.125rem;
+}
+
+h1 {
+	font: var(--font-h1);
+	color: var(--color-second);
+}
+
+h2 {
+	font: var(--font-h2);
+}
+
+p {
+	font: var(--font-p);
+}
+
+.container {
+	width: 80%;
+	max-width: 1128px;
+	margin: 0 auto;
+}
+
+.row {
+	display: flex;
+}
+
+.col {
+	width: 100%;
+}
+
+.hero {
+	min-height: 660px;
+	align-items: center;
+	text-align: center;
+	background-color: var(--color-main);
+}
+
+.hero p {
+	font: var(--font-featured);
+	text-transform: uppercase;
+	letter-spacing: 0.5em;
+}
+
+.hero h1 {
+	margin: 0;
+	line-height: 1em;
+}
