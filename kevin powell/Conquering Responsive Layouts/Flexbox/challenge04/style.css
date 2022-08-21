@@ -20,31 +20,47 @@ body {
 	font-size: 1.125rem;
 }
 
+img {
+    /* width: 100%; */
+}
+
 h1 {
 	font: var(--font-h1);
 	color: var(--color-second);
 }
 
 h2 {
-	font: var(--font-h2);
+    font: var(--font-h2);
 }
 
 p {
 	font: var(--font-p);
+    opacity: .75;
 }
 
 .container {
-	width: 80%;
+    width: 80%;
 	max-width: 1128px;
 	margin: 0 auto;
+    padding: 3em 0;
 }
 
 .row {
 	display: flex;
+    gap: 2em;
+}
+.row__reverse {
+	display: flex;
+    flex-direction: row-reverse;
+    gap: 2em;
 }
 
 .col {
 	width: 100%;
+}
+
+.hero .container{
+    max-width: 800px;
 }
 
 .hero {
@@ -63,4 +79,26 @@ p {
 .hero h1 {
 	margin: 0;
 	line-height: 1em;
+}
+
+.main__text h2{
+    text-align: center;
+    color: var(--color-second);
+}
+
+.content{
+    color: white;
+}
+
+.content h2{
+    margin-top: 0;
+    color: var(--color-main);
+}
+
+.second__section{
+    background-color: var(--color-third);
+}
+
+.third__section{
+    background-color: var(--color-second);
 }
