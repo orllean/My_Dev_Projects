@@ -112,3 +112,23 @@ p {
 .aside__content h2:not(:first-child) {
 	margin-top: 2em;
 }
+
+@media (max-width: 650px) {
+	.btn {
+		margin-bottom: 3em;
+	}
+
+	.row {
+		display: block;
+	}
+
+	.hero__img,
+	.main__content,
+	.aside__content {
+		width: 100%;
+	}
+
+	.aside__text {
+		padding: 0.9em;
+	}
+}
