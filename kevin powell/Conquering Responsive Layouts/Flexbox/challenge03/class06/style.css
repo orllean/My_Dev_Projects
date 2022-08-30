@@ -58,7 +58,7 @@ h1 {
 .row {
 	display: flex;
 	justify-content: space-between;
-    gap: 1em;
+	gap: 1em;
 }
 
 .col {
@@ -97,7 +97,7 @@ header {
 	text-transform: uppercase;
 }
 
-.nav__list--primary{
+.nav__list--primary {
 	margin: 0 auto;
 }
 
@@ -145,4 +145,25 @@ header {
 	text-align: center;
 	color: #fff;
 	background-color: #136c72;
+}
+
+@media (max-width: 700px) {
+
+	body{
+		font-size: .8rem;
+	}
+
+	.row {
+		display: block;
+	}
+
+	.btn{
+		margin-bottom: 3em;
+	}
+
+	.hero__img,
+	.primary-content,
+	.sidebar{
+		width: 100%;
+	}
 }
