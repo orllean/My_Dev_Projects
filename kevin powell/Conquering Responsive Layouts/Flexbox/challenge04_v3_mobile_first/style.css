@@ -9,19 +9,19 @@
 	--color-second: #824936;
 	--color-third: #222c2a;
 
-	--font-featured: 300 1em "Roboto", sans-serif;
-	--font-h1: 900 3.33em "Playfair Display", serif;
-	--font-h2: 900 2em "Playfair Display", serif;
-	--font-p: 400 1.16em "Roboto", sans-serif;
+	--font-featured: 300 0.7em "Roboto", sans-serif;
+	--font-h1: 900 2em "Playfair Display", serif;
+	--font-h2: 900 1.2em "Playfair Display", serif;
+	--font-p: 400 0.8em "Roboto", sans-serif;
 }
 
 body {
 	margin: 0;
-	font-size: 1.125rem;
+	font-size: 1.3125rem;
 }
 
 img {
-	width: 100%;
+	max-width: 100%;
 }
 
 h1 {
@@ -30,6 +30,7 @@ h1 {
 }
 
 h2 {
+	margin-top: 0;
 	font: var(--font-h2);
 }
 
@@ -40,23 +41,15 @@ p {
 }
 
 .container {
-	width: 80%;
+	width: 85%;
 	max-width: 1128px;
 	margin: 0 auto;
-	padding: 3em 0;
-}
-/* 
-.row {
-	display: flex;
-	gap: 2em;
-}
-
-.col {
-	width: 100%;
+	padding: 2em 0;
 }
 
 .hero {
-	min-height: 660px;
+	display: flex;
+	min-height: 650px;
 	align-items: center;
 	text-align: center;
 	background-color: var(--color-main);
@@ -87,7 +80,6 @@ p {
 }
 
 .content h2 {
-	margin-top: 0;
 	color: var(--color-main);
 }
 
@@ -101,4 +93,15 @@ p {
 
 .content:nth-last-of-type(odd) .row {
 	flex-direction: row-reverse;
-} */
+}
+
+@media (min-width: 600px) {
+	.row {
+		display: flex;
+		gap: 1.6em;
+	}
+
+	.col {
+		width: 100%;
+	}
+}
